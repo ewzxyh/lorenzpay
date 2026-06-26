@@ -6,7 +6,7 @@ export function Footer() {
     <footer className="flex flex-col items-center gap-14 pt-28 lg:pt-32">
       <div className="container space-y-3 text-center">
         <h2 className="text-2xl tracking-tight md:text-4xl lg:text-5xl">
-          Diga adeus às contestações Pix
+          Diga adeus às contestações PIX
         </h2>
         <p className="text-muted-foreground mx-auto max-w-xl leading-snug text-balance">
           Defendemos MED, cobrimos impactos financeiros elegíveis e evitamos que

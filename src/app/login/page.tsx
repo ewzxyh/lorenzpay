@@ -26,7 +26,7 @@ const Login = () => {
                 />
                 <p className="mb-2 text-2xl font-bold">Acesse a operação</p>
                 <p className="text-muted-foreground">
-                  Informe seus dados para acompanhar repasses Pix.
+                  Informe seus dados para acompanhar repasses PIX.
                 </p>
               </CardHeader>
               <CardContent>

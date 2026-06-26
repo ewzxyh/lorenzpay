@@ -27,7 +27,7 @@ export const Pricing = ({ className }: { className?: string }) => {
           </h2>
           <p className="text-muted-foreground mx-auto max-w-xl leading-snug text-balance">
             6% sobre valores processados. Seu cliente faz o PIX para nossa conta, você envia
-            o comprovante por WhatsApp e já recebe seu dinheiro em qualquer chave pix.
+            o comprovante por WhatsApp e já recebe seu dinheiro em qualquer chave PIX.
             <strong> 100% seguro e cobertura total.</strong>
           </p>
         </div>

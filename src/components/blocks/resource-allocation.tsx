@@ -47,7 +47,7 @@ const topItems: ResourceItem[] = [
     icons: [
       {
         icon: CardReceive,
-        alt: "Alto volume Pix",
+        alt: "Alto volume PIX",
         color: "#22c55e",
       },
       {
@@ -100,7 +100,7 @@ export const ResourceAllocation = () => {
     >
       <div className="">
         <h2 className="container text-center text-3xl tracking-tight text-balance sm:text-4xl md:text-5xl lg:text-6xl">
-          Infraestrutura de recebimento e repasse Pix
+          Infraestrutura de recebimento e repasse PIX
         </h2>
 
         <div className="mt-8 md:mt-12 lg:mt-20">
@@ -267,18 +267,18 @@ const Item = ({ item, isLast, className }: ItemProps) => {
                 const IconComponent = image.icon;
 
                 return (
-                <div
-                  key={j}
-                  className="bg-background grid aspect-square size-16 place-items-center rounded-2xl p-2 lg:size-20"
-                >
-                  <IconComponent
-                    aria-label={image.alt}
-                    className="size-10 lg:size-12"
-                    color={image.color}
-                    weight="BoldDuotone"
-                  />
-                  <div className="from-muted/80 absolute inset-y-0 right-0 z-10 w-16 bg-linear-to-l to-transparent" />
-                </div>
+                  <div
+                    key={j}
+                    className="bg-background grid aspect-square size-16 place-items-center rounded-2xl p-2 lg:size-20"
+                  >
+                    <IconComponent
+                      aria-label={image.alt}
+                      className="size-10 lg:size-12"
+                      color={image.color}
+                      weight="BoldDuotone"
+                    />
+                    <div className="from-muted/80 absolute inset-y-0 right-0 z-10 w-16 bg-linear-to-l to-transparent" />
+                  </div>
                 );
               })}
             </div>
@@ -288,18 +288,18 @@ const Item = ({ item, isLast, className }: ItemProps) => {
                 const IconComponent = image.icon;
 
                 return (
-                <div
-                  key={j}
-                  className="bg-background grid aspect-square size-16 place-items-center rounded-2xl lg:size-20"
-                >
-                  <IconComponent
-                    aria-label={image.alt}
-                    className="size-10 lg:size-12"
-                    color={image.color}
-                    weight="BoldDuotone"
-                  />
-                  <div className="from-muted absolute inset-y-0 bottom-0 left-0 z-10 w-14 bg-linear-to-r to-transparent" />
-                </div>
+                  <div
+                    key={j}
+                    className="bg-background grid aspect-square size-16 place-items-center rounded-2xl lg:size-20"
+                  >
+                    <IconComponent
+                      aria-label={image.alt}
+                      className="size-10 lg:size-12"
+                      color={image.color}
+                      weight="BoldDuotone"
+                    />
+                    <div className="from-muted absolute inset-y-0 bottom-0 left-0 z-10 w-14 bg-linear-to-r to-transparent" />
+                  </div>
                 );
               })}
             </div>

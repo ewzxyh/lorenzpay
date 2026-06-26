@@ -190,7 +190,7 @@ export function ContactForm() {
               <FormControl>
                 <Textarea
                   {...field}
-                  placeholder="Descreva sua operação Pix"
+                  placeholder="Descreva sua operação PIX"
                   className="resize-none"
                 />
               </FormControl>

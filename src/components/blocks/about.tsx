@@ -42,7 +42,7 @@ const About = () => {
         <ImageSection
           images={[
             { src: "/about/3.webp", alt: "Dashboard operacional" },
-            { src: "/about/4.webp", alt: "Operação Pix" },
+            { src: "/about/4.webp", alt: "Operação PIX" },
           ]}
           className="hidden lg:flex xl:translate-x-10"
         />

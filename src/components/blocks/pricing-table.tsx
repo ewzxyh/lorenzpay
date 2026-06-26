@@ -55,7 +55,7 @@ const comparisonFeatures: FeatureSection[] = [
     category: "Operação",
     features: [
       {
-        name: "Pix recebido",
+        name: "PIX recebido",
         free: "Total recebido",
         startup: "Total recebido",
         enterprise: "Total recebido",
@@ -283,7 +283,7 @@ const FeatureSections = ({ selectedPlan }: { selectedPlan: number }) => (
               <div className="flex items-center gap-1 py-4 md:border-b">
                 {renderFeatureValue(
                   [feature.free, feature.startup, feature.enterprise][
-                    selectedPlan
+                  selectedPlan
                   ],
                 )}
               </div>
@@ -295,13 +295,13 @@ const FeatureSections = ({ selectedPlan }: { selectedPlan: number }) => (
                 { plan: "Startup", value: feature.startup },
                 { plan: "Enterprise", value: feature.enterprise },
               ].map(({ plan, value }) => (
-                  <div
-                    key={plan}
-                    className="flex items-center gap-1 border-b py-4"
-                  >
-                    {renderFeatureValue(value)}
-                  </div>
-                ))}
+                <div
+                  key={plan}
+                  className="flex items-center gap-1 border-b py-4"
+                >
+                  {renderFeatureValue(value)}
+                </div>
+              ))}
             </div>
           </div>
         ))}

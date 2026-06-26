@@ -1,6 +1,6 @@
 # LorenzPay
 
-Landing page em Next.js 16 com Turbopack para apresentar a infraestrutura de processamento e repasse Pix da LorenzPay.
+Landing page em Next.js 16 com Turbopack para apresentar a infraestrutura de processamento e repasse PIX da LorenzPay.
 
 ## Desenvolvimento
 
@@ -17,7 +17,7 @@ Abra [http://localhost:3002](http://localhost:3002).
 ## Conteúdo
 
 - Hero sobre MED 2.0
-- Fluxo operacional Pix
+- Fluxo operacional PIX
 - Proteção financeira de eventos elegíveis
 - Estrutura de taxa
 - Repasse em minutos

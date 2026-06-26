@@ -63,9 +63,9 @@ const inter = Inter({
 
 const siteUrl = new URL(getSiteUrl());
 
-const siteTitle = "LorenzPay | Defesa contra MED e contestações Pix";
+const siteTitle = "LorenzPay | Defesa contra MED e contestações PIX";
 const siteDescription =
-  "A LorenzPay defende contestações Pix MED 2.0, cobre impactos financeiros elegíveis e ajuda sua operação a evitar bloqueios, prejuízos e caixa instável.";
+  "A LorenzPay defende contestações PIX MED 2.0, cobre impactos financeiros elegíveis e ajuda sua operação a evitar bloqueios, prejuízos e caixa instável.";
 
 export const metadata: Metadata = {
   metadataBase: siteUrl,
@@ -77,14 +77,14 @@ export const metadata: Metadata = {
   description: siteDescription,
   keywords: [
     "LorenzPay",
-    "contestação Pix",
-    "contestações Pix",
+    "contestação PIX",
+    "contestações PIX",
     "MED 2.0",
     "defesa MED",
-    "fraude Pix",
-    "chargeback Pix",
-    "proteção Pix",
-    "cobertura financeira Pix",
+    "fraude PIX",
+    "chargeback PIX",
+    "proteção PIX",
+    "cobertura financeira PIX",
   ],
   authors: [{ name: "LorenzPay" }],
   creator: "LorenzPay",
@@ -126,7 +126,7 @@ export const metadata: Metadata = {
         url: "/og-image.jpg",
         width: 1200,
         height: 630,
-        alt: "LorenzPay - Defesa contra contestações Pix MED 2.0",
+        alt: "LorenzPay - Defesa contra contestações PIX MED 2.0",
       },
     ],
   },

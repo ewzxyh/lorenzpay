@@ -15,16 +15,16 @@ const categories = [
       {
         question: "A LorenzPay é banco?",
         answer:
-          "Não. É uma infraestrutura de processamento e repasse de pagamentos Pix com comunicação direta com o Banco Central. Somos os primeiros e únicos no Brasil a garantir 100% de defesa contra contestações no PIX",
+          "Não. É uma infraestrutura de processamento e repasse de pagamentos PIX com comunicação direta com o Banco Central. Somos os primeiros e únicos no Brasil a garantir 100% de defesa contra contestações no PIX",
       },
       {
         question: "Quando recebo o dinheiro?",
         answer:
-          "Após envio dos comprovantes via WhatsApp junto com a chave pix para receber",
+          "Após envio dos comprovantes via WhatsApp junto com a chave PIX para receber",
       },
       {
         question: "Como eu recebo o dinheiro?",
-        answer: "Operação simples e manual via WhatsApp. Seu cliente envia o pix para a gente, depois você envia o comprovante de pagamento do seu cliente e sua chave pix para receber.",
+        answer: "Operação simples e manual via WhatsApp. Seu cliente envia o PIX para a gente, depois você envia o comprovante de pagamento do seu cliente e sua chave PIX para receber.",
       },
       {
         question: "Qual a taxa da LorenzPay?",

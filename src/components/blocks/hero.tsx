@@ -20,7 +20,7 @@ const features = [
   {
     title: "Menos prejuízo",
     description:
-      "Reduza em 100% perdas causadas por MED, fraude e chargebacks Pix.",
+      "Reduza em 100% perdas causadas por MED, fraude e chargebacks PIX.",
     icon: GraphDown,
   },
   {

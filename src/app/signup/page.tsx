@@ -25,7 +25,7 @@ const Signup = () => {
                 />
                 <p className="mb-2 text-2xl font-bold">Integrar via API</p>
                 <p className="text-muted-foreground">
-                  Solicite acesso à infraestrutura Pix da LorenzPay.
+                  Solicite acesso à infraestrutura PIX da LorenzPay.
                 </p>
               </CardHeader>
               <CardContent>

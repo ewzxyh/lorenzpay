@@ -19,7 +19,7 @@ const structuredData = {
       url: siteUrl,
       logo: `${siteUrl}/logo.svg`,
       description:
-        "A LorenzPay atua na defesa contra contestações Pix MED 2.0 e cobre impactos financeiros elegíveis.",
+        "A LorenzPay atua na defesa contra contestações PIX MED 2.0 e cobre impactos financeiros elegíveis.",
       contactPoint: {
         "@type": "ContactPoint",
         contactType: "customer support",
@@ -40,8 +40,8 @@ const structuredData = {
     {
       "@type": "Service",
       "@id": `${siteUrl}/#service`,
-      name: "Defesa contra contestações Pix MED 2.0",
-      serviceType: "Defesa MED, cobertura financeira e repasse Pix",
+      name: "Defesa contra contestações PIX MED 2.0",
+      serviceType: "Defesa MED, cobertura financeira e repasse PIX",
       provider: {
         "@id": `${siteUrl}/#organization`,
       },
@@ -76,7 +76,7 @@ const structuredData = {
           name: "A LorenzPay é banco?",
           acceptedAnswer: {
             "@type": "Answer",
-            text: "Não. A LorenzPay é uma infraestrutura de processamento e repasse de pagamentos Pix.",
+            text: "Não. A LorenzPay é uma infraestrutura de processamento e repasse de pagamentos PIX.",
           },
         },
         {
@@ -84,15 +84,15 @@ const structuredData = {
           name: "Quando recebo o dinheiro?",
           acceptedAnswer: {
             "@type": "Answer",
-            text: "O repasse é enviado após o envio dos comprovantes via WhatsApp junto com a chave Pix para receber.",
+            text: "O repasse é enviado após o envio dos comprovantes via WhatsApp junto com a chave PIX para receber.",
           },
         },
         {
           "@type": "Question",
-          name: "O que acontece em caso de contestação Pix?",
+          name: "O que acontece em caso de contestação PIX?",
           acceptedAnswer: {
             "@type": "Answer",
-            text: "A LorenzPay assume a defesa contra contestações Pix MED e cobre integralmente impactos financeiros de eventos elegíveis conforme regras operacionais.",
+            text: "A LorenzPay assume a defesa contra contestações PIX MED e cobre integralmente impactos financeiros de eventos elegíveis conforme regras operacionais.",
           },
         },
         {

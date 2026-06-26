@@ -6,7 +6,7 @@ const stats = [
     label: "Taxa sobre processado",
   },
   {
-    value: "Pix",
+    value: "PIX",
     label: "Recebimento centralizado",
   },
   {
@@ -29,7 +29,7 @@ export function AboutHero() {
           </h1>
 
           <p className="text-muted-foreground mt-5 text-2xl md:text-3xl lg:text-4xl">
-            A LorenzPay opera como camada financeira intermediária para Pix.
+            A LorenzPay opera como camada financeira intermediária para PIX.
           </p>
 
           <p className="text-muted-foreground mt-8 hidden max-w-lg space-y-6 text-lg text-balance md:block lg:mt-12">

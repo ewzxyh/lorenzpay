@@ -46,7 +46,7 @@ export const Features = () => {
             Como funciona a defesa MED?
           </h2>
           <p className="text-muted-foreground leading-snug">
-            Nós assumimos a defesa junto ao Banco Central. O cliente paga via Pix para a LorenzPay. Depois você envia o comprovante
+            Nós assumimos a defesa junto ao Banco Central. O cliente paga via PIX para a LorenzPay. Depois você envia o comprovante
             pelo WhatsApp e recebe o valor líquido na sua conta <strong className="text-red-400">(mesmo que já tenha sido contestado). </strong>
             Garantimos 100% de sucesso e cobertura total.
           </p>
