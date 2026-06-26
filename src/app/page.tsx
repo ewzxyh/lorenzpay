@@ -6,10 +6,9 @@ import { Logos } from "@/components/blocks/logos";
 import { Pricing } from "@/components/blocks/pricing";
 import { ResourceAllocation } from "@/components/blocks/resource-allocation";
 import { Testimonials } from "@/components/blocks/testimonials";
+import { getSiteUrl } from "@/lib/site-url";
 
-const siteUrl = (
-  process.env.NEXT_PUBLIC_SITE_URL || "https://lorenzpay.com.br"
-).replace(/\/$/, "");
+const siteUrl = getSiteUrl();
 
 const structuredData = {
   "@context": "https://schema.org",

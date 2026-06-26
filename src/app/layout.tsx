@@ -6,6 +6,7 @@ import type { Metadata } from "next";
 import { Footer } from "@/components/blocks/footer";
 import { Navbar } from "@/components/blocks/navbar";
 import { StyleGlideProvider } from "@/components/styleglide-provider";
+import { getSiteUrl } from "@/lib/site-url";
 import "@/styles/globals.css";
 
 const dmSans = localFont({
@@ -60,9 +61,7 @@ const inter = Inter({
   variable: "--font-inter",
 });
 
-const siteUrl = new URL(
-  process.env.NEXT_PUBLIC_SITE_URL || "https://lorenzpay.com.br",
-);
+const siteUrl = new URL(getSiteUrl());
 
 const siteTitle = "LorenzPay | Defesa contra MED e contestações Pix";
 const siteDescription =
