@@ -68,10 +68,10 @@ const items: TestimonialItem[] = [
     color: "#f43f5e",
   },
   {
-    quote: "Defesa MED conduzida pela LorenzoPay.",
+    quote: "Defesa MED conduzida pela LorenzPay.",
     author: "Solução",
     role: "Defesa estruturada",
-    company: "LorenzoPay",
+    company: "LorenzPay",
     icon: ShieldCheck,
     color: "#22c55e",
   },
@@ -79,7 +79,7 @@ const items: TestimonialItem[] = [
     quote: "Comprovantes enviados e organizados pelo WhatsApp.",
     author: "Solução",
     role: "Evidências",
-    company: "LorenzoPay",
+    company: "LorenzPay",
     icon: ChatSquareCheck,
     color: "#22c55e",
   },
@@ -87,7 +87,7 @@ const items: TestimonialItem[] = [
     quote: "Cobertura financeira para eventos elegíveis.",
     author: "Solução",
     role: "Proteção",
-    company: "LorenzoPay",
+    company: "LorenzPay",
     icon: CheckCircle,
     color: "#22c55e",
   },
@@ -95,7 +95,7 @@ const items: TestimonialItem[] = [
     quote: "Repasse enviado após o comprovante da transação.",
     author: "Solução",
     role: "Recebimento",
-    company: "LorenzoPay",
+    company: "LorenzPay",
     icon: CardReceive,
     color: "#60a5fa",
   },
@@ -103,7 +103,7 @@ const items: TestimonialItem[] = [
     quote: "Sem tempo perdido com contestação Pix.",
     author: "Solução",
     role: "Operação protegida",
-    company: "LorenzoPay",
+    company: "LorenzPay",
     icon: ClockCircle,
     color: "#a855f7",
   },
@@ -129,7 +129,7 @@ export const Testimonials = ({
             </h2>
             <p className="text-muted-foreground max-w-md leading-snug">
               Uma contestação Pix pode reter saldo, bloquear a operação e gerar
-              prejuízo. A LorenzoPay assume a defesa e protege seu caixa.
+              prejuízo. A LorenzPay assume a defesa e protege seu caixa.
             </p>
           </div>
 

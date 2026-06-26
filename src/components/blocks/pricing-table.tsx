@@ -103,7 +103,7 @@ const comparisonFeatures: FeatureSection[] = [
         enterprise: true,
       },
       {
-        name: "Valor coberto pela LorenzoPay",
+        name: "Valor coberto pela LorenzPay",
         free: null,
         startup: null,
         enterprise: true,

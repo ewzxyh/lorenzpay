@@ -32,7 +32,7 @@ export default function NotFound() {
               size="lg"
               className="min-w-[200px]"
             >
-              <Link href="/contact">Falar com a LorenzoPay</Link>
+              <Link href="/contact">Falar com a LorenzPay</Link>
             </Button>
           </div>
         </div>

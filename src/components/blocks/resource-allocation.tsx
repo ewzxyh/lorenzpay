@@ -35,7 +35,7 @@ const topItems: ResourceItem[] = [
   {
     title: "Proteção integral de operação.",
     description:
-      "A LorenzoPay assume integralmente o risco financeiro de contestações elegíveis relacionadas às transações processadas em sua infraestrutura.",
+      "A LorenzPay assume integralmente o risco financeiro de contestações elegíveis relacionadas às transações processadas em sua infraestrutura.",
     visual: "medDefense",
     className: "flex-1 [&>.title-container]:mb-5 md:[&>.title-container]:mb-8",
     fade: [""],
@@ -135,9 +135,9 @@ interface ItemProps {
   className?: string;
 }
 
-const LorenzoPayBadge = () => (
+const LorenzPayBadge = () => (
   <div className="inline-flex max-w-full shrink-0 animate-pulse items-center gap-1.5 overflow-hidden rounded-full border border-border/70 bg-background px-4 py-1.5 font-semibold text-emerald-600 text-xs dark:text-emerald-400 sm:mx-2">
-    <span className="min-w-0 truncate whitespace-nowrap">LorenzoPay</span>
+    <span className="min-w-0 truncate whitespace-nowrap">LorenzPay</span>
     <SquareTransferHorizontal
       aria-hidden="true"
       className="size-4 shrink-0"
@@ -193,7 +193,7 @@ const MedDefenseVisual = () => {
             }}
           />
           <div className="z-10 px-4 sm:px-0">
-            <LorenzoPayBadge />
+            <LorenzPayBadge />
           </div>
         </div>
 
@@ -209,7 +209,7 @@ const MedDefenseVisual = () => {
             }}
           />
           <div className="z-10 px-0">
-            <LorenzoPayBadge />
+            <LorenzPayBadge />
           </div>
           <div
             className="h-px min-w-8 flex-1 text-muted-foreground/40"

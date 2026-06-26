@@ -1,6 +1,6 @@
-# LorenzoPay
+# LorenzPay
 
-Landing page em Next.js 16 com Turbopack para apresentar a infraestrutura de processamento e repasse Pix da LorenzoPay.
+Landing page em Next.js 16 com Turbopack para apresentar a infraestrutura de processamento e repasse Pix da LorenzPay.
 
 ## Desenvolvimento
 

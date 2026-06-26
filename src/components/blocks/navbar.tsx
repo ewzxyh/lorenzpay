@@ -34,15 +34,15 @@ export const Navbar = () => {
       <div className="flex items-center justify-between px-6 py-3">
         <Link href="/" className="flex shrink-0 items-center gap-2">
           <Image
-            src="/lorenzopayheader.svg"
-            alt="LorenzoPay"
+            src="/lorenzpayheader.svg"
+            alt="LorenzPay"
             width={28}
             height={28}
             priority
             className="size-7"
           />
           <span className="font-bold text-[#4B4EFF] text-sm italic">
-            LorenzoPay
+            LorenzPay
           </span>
         </Link>
 

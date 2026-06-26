@@ -1,18 +1,18 @@
-# LorenzoPay
+# LorenzPay
 > Defesa contra contestações Pix MED 2.0, cobertura financeira de eventos elegíveis e operação via WhatsApp para autônomos e pequenas empresas no Brasil.
 
 ## Páginas principais
-- [Landing page](https://lorenzopay.com.br/): Explica a defesa contra contestações Pix, cobertura financeira elegível, fluxo operacional e taxa de 10%.
-- [Contato](https://lorenzopay.com.br/contact): Canal para falar com a equipe LorenzoPay.
-- [Política de privacidade](https://lorenzopay.com.br/privacy): Informações sobre tratamento de dados e privacidade.
+- [Landing page](https://lorenzpay.com.br/): Explica a defesa contra contestações Pix, cobertura financeira elegível, fluxo operacional e taxa de 10%.
+- [Contato](https://lorenzpay.com.br/contact): Canal para falar com a equipe LorenzPay.
+- [Política de privacidade](https://lorenzpay.com.br/privacy): Informações sobre tratamento de dados e privacidade.
 
 ## Fatos principais
-- A LorenzoPay atua na defesa contra contestações Pix MED 2.0.
+- A LorenzPay atua na defesa contra contestações Pix MED 2.0.
 - A taxa é de 10% sobre valores processados.
 - O repasse é enviado após envio dos comprovantes via WhatsApp junto com a chave Pix.
 - A cobertura financeira se aplica a eventos elegíveis conforme regras operacionais.
 
 ## Entidade
-- Nome: LorenzoPay
+- Nome: LorenzPay
 - País de atuação: Brasil
 - Público: autônomos e pequenas empresas que recebem Pix e sofrem risco de contestação MED.

@@ -20,7 +20,7 @@ const About = () => {
         <TextSection
           title="Proteção financeira"
           paragraphs={[
-            "A LorenzoPay assume integralmente o risco financeiro de contestações elegíveis relacionadas às transações processadas em sua infraestrutura.",
+            "A LorenzPay assume integralmente o risco financeiro de contestações elegíveis relacionadas às transações processadas em sua infraestrutura.",
             "A operação combina análise de risco em tempo de processamento, gestão interna de eventos financeiros e registro completo de operações.",
             "A cobertura financeira total se aplica aos eventos elegíveis conforme regras operacionais.",
           ]}
@@ -35,8 +35,8 @@ const About = () => {
       <div className="flex flex-col gap-8 lg:gap-16 xl:gap-20">
         <TextSection
           paragraphs={[
-            "A LorenzoPay opera como camada financeira intermediária, centralizando recebimentos, automatizando conciliação e realizando repasse estruturado.",
-            "O dashboard acompanha total recebido, taxa aplicada, saldo líquido, repasses realizados, repasses pendentes, transações processadas, eventos em análise e valor coberto pela LorenzoPay.",
+            "A LorenzPay opera como camada financeira intermediária, centralizando recebimentos, automatizando conciliação e realizando repasse estruturado.",
+            "O dashboard acompanha total recebido, taxa aplicada, saldo líquido, repasses realizados, repasses pendentes, transações processadas, eventos em análise e valor coberto pela LorenzPay.",
           ]}
         />
         <ImageSection

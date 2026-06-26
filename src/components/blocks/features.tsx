@@ -6,7 +6,7 @@ import { Card, CardContent } from "@/components/ui/card";
 
 const items = [
   {
-    title: "Pagamento via Pix recebido na LorenzoPay",
+    title: "Pagamento via Pix recebido na LorenzPay",
     step: "01",
   },
   {
@@ -37,7 +37,7 @@ export const Features = () => {
             Como funciona a defesa MED?
           </h2>
           <p className="text-muted-foreground leading-snug">
-            Pagamento via Pix é recebido na infraestrutura LorenzoPay, processado
+            Pagamento via Pix é recebido na infraestrutura LorenzPay, processado
             e validado internamente. O repasse líquido é enviado para sua conta
             após enviar comprovante de transação via WhatsApp. Taxa de 10%.
           </p>

@@ -22,7 +22,7 @@ export const Pricing = ({ className }: { className?: string }) => {
       <div className="container max-w-5xl">
         <div className="space-y-4 text-center">
           <h2 className="text-2xl tracking-tight md:text-4xl lg:text-5xl">
-            Quanto custa a LorenzoPay?
+            Quanto custa a LorenzPay?
           </h2>
           <p className="text-muted-foreground mx-auto max-w-xl leading-snug text-balance">
             10% sobre valores processados. Após processamento, o valor líquido
@@ -52,7 +52,7 @@ export const Pricing = ({ className }: { className?: string }) => {
               .pricing-card-icon {
                 display: block;
                 background-color: currentColor;
-                mask: url("/lorenzopayheader.svg") center / contain no-repeat;
+                mask: url("/lorenzpayheader.svg") center / contain no-repeat;
               }
             }`}
           </style>

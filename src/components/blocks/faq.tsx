@@ -13,7 +13,7 @@ const categories = [
     title: "Operação",
     questions: [
       {
-        question: "A LorenzoPay é banco?",
+        question: "A LorenzPay é banco?",
         answer:
           "Não. É uma infraestrutura de processamento e repasse de pagamentos Pix.",
       },
@@ -27,7 +27,7 @@ const categories = [
         answer: "Não. Também é possível operar via WhatsApp.",
       },
       {
-        question: "Qual a taxa da LorenzoPay?",
+        question: "Qual a taxa da LorenzPay?",
         answer:
           "É 10%, pois garantimos que não haverá nenhum problema relacionada a contestação de MED 2.0.",
       },
@@ -39,12 +39,12 @@ const categories = [
       {
         question: "O que acontece em caso de contestação?",
         answer:
-          "A LorenzoPay garante vitória na defesa contra 100% contra contestações de PIX (MED), caso contrário cobrimos integralmente os impactos financeiross.",
+          "A LorenzPay garante vitória na defesa contra 100% contra contestações de PIX (MED), caso contrário cobrimos integralmente os impactos financeiross.",
       },
       {
         question: "Que risco financeiro é assumido?",
         answer:
-          "A LorenzoPay assume integralmente o risco financeiro de contestações elegíveis relacionadas às transações processadas em sua infraestrutura.",
+          "A LorenzPay assume integralmente o risco financeiro de contestações elegíveis relacionadas às transações processadas em sua infraestrutura.",
       },
     ],
   },
@@ -76,7 +76,7 @@ export const FAQ = ({
             <p className="text-muted-foreground max-w-md leading-snug lg:mx-auto">
               Se precisar operar via API ou WhatsApp,{" "}
               <Link href="/contact" className="underline underline-offset-4">
-                fale com a LorenzoPay
+                fale com a LorenzPay
               </Link>
               .
             </p>

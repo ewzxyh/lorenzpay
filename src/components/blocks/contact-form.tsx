@@ -43,11 +43,7 @@ export function ContactForm() {
   });
   const formAction = useAction(serverAction, {
     onSuccess: () => {
-      // TODO: show success message
       form.reset();
-    },
-    onError: () => {
-      // TODO: show error message
     },
   });
   const handleSubmit = form.handleSubmit(async (data: Schema) => {
@@ -66,7 +62,7 @@ export function ContactForm() {
             Obrigado
           </h2>
           <p className="text-muted-foreground text-center text-lg text-pretty">
-            Solicitação enviada. A LorenzoPay entrará em contato em breve.
+            Solicitação enviada. A LorenzPay entrará em contato em breve.
           </p>
         </div>
       </div>

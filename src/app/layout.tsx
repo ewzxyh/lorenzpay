@@ -61,23 +61,23 @@ const inter = Inter({
 });
 
 const siteUrl = new URL(
-  process.env.NEXT_PUBLIC_SITE_URL || "https://lorenzopay.com.br",
+  process.env.NEXT_PUBLIC_SITE_URL || "https://lorenzpay.com.br",
 );
 
-const siteTitle = "LorenzoPay | Defesa contra MED e contestações Pix";
+const siteTitle = "LorenzPay | Defesa contra MED e contestações Pix";
 const siteDescription =
-  "A LorenzoPay defende contestações Pix MED 2.0, cobre impactos financeiros elegíveis e ajuda sua operação a evitar bloqueios, prejuízos e caixa instável.";
+  "A LorenzPay defende contestações Pix MED 2.0, cobre impactos financeiros elegíveis e ajuda sua operação a evitar bloqueios, prejuízos e caixa instável.";
 
 export const metadata: Metadata = {
   metadataBase: siteUrl,
-  applicationName: "LorenzoPay",
+  applicationName: "LorenzPay",
   title: {
     default: siteTitle,
-    template: "%s | LorenzoPay",
+    template: "%s | LorenzPay",
   },
   description: siteDescription,
   keywords: [
-    "LorenzoPay",
+    "LorenzPay",
     "contestação Pix",
     "contestações Pix",
     "MED 2.0",
@@ -87,9 +87,9 @@ export const metadata: Metadata = {
     "proteção Pix",
     "cobertura financeira Pix",
   ],
-  authors: [{ name: "LorenzoPay" }],
-  creator: "LorenzoPay",
-  publisher: "LorenzoPay",
+  authors: [{ name: "LorenzPay" }],
+  creator: "LorenzPay",
+  publisher: "LorenzPay",
   alternates: {
     canonical: "/",
   },
@@ -119,7 +119,7 @@ export const metadata: Metadata = {
     title: siteTitle,
     description: siteDescription,
     url: "/",
-    siteName: "LorenzoPay",
+    siteName: "LorenzPay",
     locale: "pt_BR",
     type: "website",
     images: [
@@ -127,7 +127,7 @@ export const metadata: Metadata = {
         url: "/og-image.jpg",
         width: 1200,
         height: 630,
-        alt: "LorenzoPay - Defesa contra contestações Pix MED 2.0",
+        alt: "LorenzPay - Defesa contra contestações Pix MED 2.0",
       },
     ],
   },

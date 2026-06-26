@@ -21,7 +21,7 @@ export function Footer() {
       </div>
 
       <div className="text-primary mt-10 w-full overflow-hidden text-center text-[18vw] leading-none font-semibold tracking-tight md:mt-14 lg:mt-20">
-        LorenzoPay
+        LorenzPay
       </div>
     </footer>
   );

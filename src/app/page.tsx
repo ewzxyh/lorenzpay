@@ -8,7 +8,7 @@ import { ResourceAllocation } from "@/components/blocks/resource-allocation";
 import { Testimonials } from "@/components/blocks/testimonials";
 
 const siteUrl = (
-  process.env.NEXT_PUBLIC_SITE_URL || "https://lorenzopay.com.br"
+  process.env.NEXT_PUBLIC_SITE_URL || "https://lorenzpay.com.br"
 ).replace(/\/$/, "");
 
 const structuredData = {
@@ -17,11 +17,11 @@ const structuredData = {
     {
       "@type": "Organization",
       "@id": `${siteUrl}/#organization`,
-      name: "LorenzoPay",
+      name: "LorenzPay",
       url: siteUrl,
       logo: `${siteUrl}/logo.svg`,
       description:
-        "A LorenzoPay atua na defesa contra contestações Pix MED 2.0 e cobre impactos financeiros elegíveis.",
+        "A LorenzPay atua na defesa contra contestações Pix MED 2.0 e cobre impactos financeiros elegíveis.",
       contactPoint: {
         "@type": "ContactPoint",
         contactType: "customer support",
@@ -32,7 +32,7 @@ const structuredData = {
     {
       "@type": "WebSite",
       "@id": `${siteUrl}/#website`,
-      name: "LorenzoPay",
+      name: "LorenzPay",
       url: siteUrl,
       inLanguage: "pt-BR",
       publisher: {
@@ -66,7 +66,7 @@ const structuredData = {
         name: "Taxa de 10% sobre valores processados",
         priceCurrency: "BRL",
         description:
-          "A LorenzoPay cobra 10% sobre valores processados e cobre impactos financeiros de eventos elegíveis.",
+          "A LorenzPay cobra 10% sobre valores processados e cobre impactos financeiros de eventos elegíveis.",
       },
     },
     {
@@ -75,10 +75,10 @@ const structuredData = {
       mainEntity: [
         {
           "@type": "Question",
-          name: "A LorenzoPay é banco?",
+          name: "A LorenzPay é banco?",
           acceptedAnswer: {
             "@type": "Answer",
-            text: "Não. A LorenzoPay é uma infraestrutura de processamento e repasse de pagamentos Pix.",
+            text: "Não. A LorenzPay é uma infraestrutura de processamento e repasse de pagamentos Pix.",
           },
         },
         {
@@ -94,15 +94,15 @@ const structuredData = {
           name: "O que acontece em caso de contestação Pix?",
           acceptedAnswer: {
             "@type": "Answer",
-            text: "A LorenzoPay assume a defesa contra contestações Pix MED e cobre integralmente impactos financeiros de eventos elegíveis conforme regras operacionais.",
+            text: "A LorenzPay assume a defesa contra contestações Pix MED e cobre integralmente impactos financeiros de eventos elegíveis conforme regras operacionais.",
           },
         },
         {
           "@type": "Question",
-          name: "Qual a taxa da LorenzoPay?",
+          name: "Qual a taxa da LorenzPay?",
           acceptedAnswer: {
             "@type": "Answer",
-            text: "A taxa da LorenzoPay é de 10% sobre os valores processados.",
+            text: "A taxa da LorenzPay é de 10% sobre os valores processados.",
           },
         },
       ],

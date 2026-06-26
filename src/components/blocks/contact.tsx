@@ -48,7 +48,7 @@ export default function Contact() {
     <section className="py-28 lg:py-32 lg:pt-44">
       <div className="container max-w-2xl">
         <h1 className="text-center text-2xl font-semibold tracking-tight md:text-4xl lg:text-5xl">
-          Falar com a LorenzoPay
+          Falar com a LorenzPay
         </h1>
         <p className="text-muted-foreground mt-4 text-center leading-snug font-medium lg:mx-auto">
           Fale com o CEO para operar com proteção contra contestações Pix.

@@ -14,7 +14,7 @@ import { Button } from "@/components/ui/button";
 const features = [
   {
     title: "Defesa MED",
-    description: "A LorenzoPay conduz a defesa contra contestações Pix.",
+    description: "A LorenzPay conduz a defesa contra contestações Pix.",
     icon: CircleDot,
   },
   {
@@ -46,7 +46,7 @@ export const Hero = () => {
           </h1>
 
           <p className="text-muted-foreground mt-5 max-w-2xl text-lg leading-snug md:text-xl lg:text-2xl">
-            Receba Pix pela LorenzoPay e deixe as contestações MED 2.0 conosco:
+            Receba Pix pela LorenzPay e deixe as contestações MED 2.0 conosco:
             processamos, defendemos e cobrimos o risco financeiro.
           </p>
 
@@ -86,21 +86,21 @@ export const Hero = () => {
         </div>
       </div>
 
-      <div className="mt-12 aspect-square overflow-hidden max-lg:ml-6 md:mt-20 md:aspect-auto md:h-[520px] lg:container lg:mt-24 lg:h-[560px] xl:h-[600px]">
+      <div className="mt-12 aspect-square overflow-hidden max-lg:ml-4 md:mt-20 md:aspect-auto md:h-[520px] lg:container lg:mt-24 lg:h-[560px] xl:h-[600px]">
         <div className="relative h-full w-full md:h-[793px]">
           <Image
             src="/hero-mobile.webp"
             alt="Tabela mobile de transações Pix com status MED, repasses enviados e detalhes de cobertura financeira"
             fill
             sizes="100vw"
-            className="rounded-2xl rounded-br-none object-cover object-left-top shadow-lg max-lg:rounded-tr-none md:hidden"
+            className="origin-top-left scale-115 rounded-lg rounded-br-none object-cover object-left-top max-lg:rounded-tr-none md:hidden"
           />
           <Image
             src="/hero.webp"
             alt="Tabela de transações Pix com status MED, repasses enviados e detalhes de cobertura financeira"
             fill
             sizes="100vw"
-            className="hidden rounded-2xl object-cover object-left-top shadow-lg max-lg:rounded-tr-none md:block"
+            className="hidden origin-top-left scale-90 rounded-2xl object-cover object-left-top shadow-lg max-lg:rounded-tr-none md:block"
           />
         </div>
       </div>

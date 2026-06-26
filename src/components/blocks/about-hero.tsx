@@ -29,11 +29,11 @@ export function AboutHero() {
           </h1>
 
           <p className="text-muted-foreground mt-5 text-2xl md:text-3xl lg:text-4xl">
-            A LorenzoPay opera como camada financeira intermediária para Pix.
+            A LorenzPay opera como camada financeira intermediária para Pix.
           </p>
 
           <p className="text-muted-foreground mt-8 hidden max-w-lg space-y-6 text-lg text-balance md:block lg:mt-12">
-            A LorenzoPay assume integralmente o risco financeiro de contestações
+            A LorenzPay assume integralmente o risco financeiro de contestações
             elegíveis relacionadas às transações processadas em sua
             infraestrutura, garantindo que o cliente não arque com prejuízos
             decorrentes desses eventos.
