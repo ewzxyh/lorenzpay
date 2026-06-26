@@ -149,24 +149,31 @@ const LorenzoPayBadge = () => (
 
 const MedDefenseVisual = () => {
   return (
-    <div className="relative mx-auto w-full max-w-[495px] overflow-hidden rounded-xl border border-border/70 bg-background p-4 transition-transform duration-200 ease-out hover:-translate-y-[0.05rem] sm:border-0 sm:bg-transparent sm:p-0">
+    <div className="med-defense-visual relative mx-auto w-full max-w-[495px] overflow-hidden rounded-xl border border-border/70 bg-background p-4 transition-transform duration-200 ease-out hover:-translate-y-[0.05rem] sm:mx-0 sm:max-w-full sm:border-0 sm:bg-transparent sm:p-0">
       <style>
         {`@media (min-width: 640px) {
           .med-mobile-connector { display: none; }
           .med-desktop-connector { display: flex; }
+        }
+        @media (min-width: 1024px) {
+          .med-defense-visual .truncate {
+            overflow: visible;
+            text-overflow: clip;
+            white-space: nowrap;
+          }
         }`}
       </style>
-      <div className="relative z-10 flex w-full flex-col gap-5 sm:flex-row sm:items-center sm:gap-3">
-        <div className="flex min-w-0 flex-1 flex-col rounded-none border-0 bg-transparent p-0 sm:rounded-xl sm:border sm:border-border/70 sm:bg-background sm:p-3">
+      <div className="relative z-10 flex w-full flex-col gap-5 sm:flex-row sm:items-center sm:gap-4">
+        <div className="flex min-w-0 flex-1 flex-col rounded-none border-0 bg-transparent p-0 sm:rounded-xl sm:border sm:border-border/70 sm:bg-background sm:p-4 md:min-h-44 lg:min-w-48 lg:flex-none lg:p-6">
           <p className="truncate font-semibold text-sm">Contestação MED</p>
           <p className="mt-1 truncate text-muted-foreground text-xs">
             PIX em análise
           </p>
           <div className="grid flex-1 place-items-center py-4">
-            <div className="grid aspect-square size-24 place-items-center rounded-2xl bg-muted/40">
+            <div className="grid aspect-square size-24 place-items-center rounded-2xl bg-muted/40 sm:size-20">
               <ShieldWarning
                 aria-label="Alerta de fraude"
-                className="size-16"
+                className="size-16 sm:size-12"
                 color="#fb7185"
                 weight="BoldDuotone"
               />
@@ -192,8 +199,7 @@ const MedDefenseVisual = () => {
 
         <div
           aria-hidden="true"
-          className="med-desktop-connector hidden h-10 w-52 shrink-0 items-center justify-center text-muted-foreground/50"
-          style={{ transform: "translateY(3rem)" }}
+          className="med-desktop-connector hidden h-10 min-w-20 flex-1 items-center justify-center text-muted-foreground/50"
         >
           <div
             className="h-px min-w-8 flex-1 text-muted-foreground/40"
@@ -214,13 +220,16 @@ const MedDefenseVisual = () => {
           />
         </div>
 
-        <div className="flex min-w-0 flex-1 flex-col rounded-none border-0 bg-transparent p-0 sm:rounded-xl sm:border sm:border-border/70 sm:bg-background sm:p-3">
+        <div className="flex min-w-0 flex-1 flex-col rounded-none border-0 bg-transparent p-0 sm:rounded-xl sm:border sm:border-border/70 sm:bg-background sm:p-4 md:min-h-44 lg:min-w-48 lg:flex-none lg:p-6">
           <p className="truncate font-semibold text-sm">Defesa MED</p>
+          <p className="mt-1 truncate text-muted-foreground text-xs">
+            Saldo liberado
+          </p>
           <div className="grid flex-1 place-items-center py-4">
-            <div className="grid aspect-square size-24 place-items-center rounded-2xl bg-muted/40">
+            <div className="grid aspect-square size-24 place-items-center rounded-2xl bg-muted/40 sm:size-20">
               <ChatSquareCheck
                 aria-label="MED defendido"
-                className="size-16"
+                className="size-16 sm:size-12"
                 color="#22c55e"
                 weight="BoldDuotone"
               />

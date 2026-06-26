@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 
+import Image from "next/image";
 import Link from "next/link";
 
 import { Button } from "@/components/ui/button";
@@ -32,7 +33,15 @@ export const Navbar = () => {
     >
       <div className="flex items-center justify-between px-6 py-3">
         <Link href="/" className="flex shrink-0 items-center gap-2">
-          <span className="text-foreground text-sm font-semibold">
+          <Image
+            src="/lorenzopayheader.svg"
+            alt="LorenzoPay"
+            width={28}
+            height={28}
+            priority
+            className="size-7"
+          />
+          <span className="font-bold text-[#4B4EFF] text-sm italic">
             LorenzoPay
           </span>
         </Link>
@@ -107,6 +116,11 @@ export const Navbar = () => {
             </Link>
           ))}
         </nav>
+        <Link href="/contact" onClick={() => setIsMenuOpen(false)}>
+          <Button className="mt-5 w-full rounded-xl bg-[#4B4EFF] text-white hover:bg-[#4B4EFF]/90">
+            Falar com CEO
+          </Button>
+        </Link>
       </div>
     </section>
   );

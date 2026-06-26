@@ -1,4 +1,3 @@
-import { WalletMoney } from "@solar-icons/react";
 import { Check } from "lucide-react";
 
 import { Button } from "@/components/ui/button";
@@ -52,23 +51,23 @@ export const Pricing = ({ className }: { className?: string }) => {
 
               .pricing-card-icon {
                 display: block;
+                background-color: currentColor;
+                mask: url("/lorenzopayheader.svg") center / contain no-repeat;
               }
             }`}
           </style>
-          <WalletMoney
+          <div
             aria-hidden="true"
             className="pricing-card-icon pointer-events-none text-muted-foreground"
-            color="currentColor"
             style={{
-              height: "20rem",
-              opacity: 0.28,
+              height: "21.6rem",
+              opacity: 0.18,
               position: "absolute",
-              right: "-2rem",
-              top: "46%",
+              right: "-1.5rem",
+              top: "50%",
               transform: "translateY(-50%)",
-              width: "20rem",
+              width: "21.6rem",
             }}
-            weight="BoldDuotone"
           />
           <CardContent className="pricing-card-content relative flex flex-col gap-8 px-8 py-10 text-start">
             <div className="pricing-card-column space-y-5">
