@@ -6,7 +6,6 @@ import type { Metadata } from "next";
 import { Footer } from "@/components/blocks/footer";
 import { Navbar } from "@/components/blocks/navbar";
 import { StyleGlideProvider } from "@/components/styleglide-provider";
-import { ThemeProvider } from "@/components/theme-provider";
 import "@/styles/globals.css";
 
 const dmSans = localFont({
@@ -61,68 +60,84 @@ const inter = Inter({
   variable: "--font-inter",
 });
 
+const siteUrl = new URL(
+  process.env.NEXT_PUBLIC_SITE_URL || "https://lorenzopay.com.br",
+);
+
+const siteTitle = "LorenzoPay | Defesa contra MED e contestações Pix";
+const siteDescription =
+  "A LorenzoPay defende contestações Pix MED 2.0, cobre impactos financeiros elegíveis e ajuda sua operação a evitar bloqueios, prejuízos e caixa instável.";
+
 export const metadata: Metadata = {
+  metadataBase: siteUrl,
+  applicationName: "LorenzoPay",
   title: {
-    default: "Mainline - Modern Next.js Template",
-    template: "%s | Mainline",
+    default: siteTitle,
+    template: "%s | LorenzoPay",
   },
-  description:
-    "A modern Next.js template built with shadcn/ui, Tailwind & MDX. Open source - MIT License.",
+  description: siteDescription,
   keywords: [
-    "Next.js",
-    "nextjs template",
-    "nextjs theme",
-    "nextjs starter",
-    "shadcn template",
-    "shadcn theme",
-    "shadcn starter",
-    "tailwind template",
-    "tailwind theme",
-    "tailwind starter",
-    "mdx template",
-    "mdx theme",
-    "mdx starter",
+    "LorenzoPay",
+    "contestação Pix",
+    "contestações Pix",
+    "MED 2.0",
+    "defesa MED",
+    "fraude Pix",
+    "chargeback Pix",
+    "proteção Pix",
+    "cobertura financeira Pix",
   ],
-  authors: [{ name: "shadcnblocks.com" }],
-  creator: "shadcnblocks.com",
-  publisher: "shadcnblocks.com",
+  authors: [{ name: "LorenzoPay" }],
+  creator: "LorenzoPay",
+  publisher: "LorenzoPay",
+  alternates: {
+    canonical: "/",
+  },
   robots: {
     index: true,
     follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-image-preview": "large",
+      "max-snippet": -1,
+      "max-video-preview": -1,
+    },
   },
+  manifest: "/favicon/site.webmanifest",
   icons: {
     icon: [
       { url: "/favicon/favicon.ico", sizes: "48x48" },
       { url: "/favicon/favicon.svg", type: "image/svg+xml" },
-      { url: "/favicon/favicon-96x96.png", sizes: "96x96", type: "image/png" },
-      { url: "/favicon/favicon.svg", type: "image/svg+xml" },
-      { url: "/favicon/favicon.ico" },
+      { url: "/favicon/favicon-32x32.png", sizes: "32x32", type: "image/png" },
+      { url: "/favicon/favicon-16x16.png", sizes: "16x16", type: "image/png" },
     ],
     apple: [{ url: "/favicon/apple-touch-icon.png", sizes: "180x180" }],
     shortcut: [{ url: "/favicon/favicon.ico" }],
   },
   openGraph: {
-    title: "Mainline - Modern Next.js Template",
-    description:
-      "A modern Next.js template built with shadcn/ui, Tailwind & MDX. Open source - MIT License.",
-    siteName: "Mainline",
+    title: siteTitle,
+    description: siteDescription,
+    url: "/",
+    siteName: "LorenzoPay",
+    locale: "pt_BR",
+    type: "website",
     images: [
       {
         url: "/og-image.jpg",
         width: 1200,
         height: 630,
-        alt: "Mainline - Modern Next.js Template",
+        alt: "LorenzoPay - Defesa contra contestações Pix MED 2.0",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Mainline - Modern Next.js Template",
-    description:
-      "A modern Next.js template built with shadcn/ui, Tailwind & MDX. Open source - MIT License.",
+    title: siteTitle,
+    description: siteDescription,
     images: ["/og-image.jpg"],
-    creator: "@ausrobdev",
   },
+  category: "financial services",
 };
 
 export default function RootLayout({
@@ -131,26 +146,12 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" suppressHydrationWarning>
-      <head>
-        <script
-          async
-          crossOrigin="anonymous"
-          src="https://tweakcn.com/live-preview.min.js"
-        />
-      </head>
+    <html lang="pt-BR" suppressHydrationWarning>
       <body className={`${dmSans.variable} ${inter.variable} antialiased`}>
-        <ThemeProvider
-          attribute="class"
-          defaultTheme="light"
-          enableSystem
-          disableTransitionOnChange
-        >
-          <StyleGlideProvider />
-          <Navbar />
-          <main className="">{children}</main>
-          <Footer />
-        </ThemeProvider>
+        <StyleGlideProvider />
+        <Navbar />
+        <main className="">{children}</main>
+        <Footer />
       </body>
     </html>
   );

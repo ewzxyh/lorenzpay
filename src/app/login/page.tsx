@@ -24,18 +24,18 @@ const Login = () => {
                   height={18}
                   className="mb-7 dark:invert"
                 />
-                <p className="mb-2 text-2xl font-bold">Welcome back</p>
+                <p className="mb-2 text-2xl font-bold">Acesse a operação</p>
                 <p className="text-muted-foreground">
-                  Please enter your details.
+                  Informe seus dados para acompanhar repasses Pix.
                 </p>
               </CardHeader>
               <CardContent>
                 <div className="grid gap-4">
-                  <Input type="email" placeholder="Enter your email" required />
+                  <Input type="email" placeholder="redacted@example.invalid" required />
                   <div>
                     <Input
                       type="password"
-                      placeholder="Enter your password"
+                      placeholder="Sua senha"
                       required
                     />
                   </div>
@@ -49,25 +49,28 @@ const Login = () => {
                         htmlFor="remember"
                         className="text-sm leading-none font-medium peer-disabled:cursor-not-allowed peer-disabled:opacity-70"
                       >
-                        Remember me
+                        Lembrar acesso
                       </label>
                     </div>
-                    <a href="#" className="text-primary text-sm font-medium">
-                      Forgot password
-                    </a>
+                    <Link
+                      href="/contact"
+                      className="text-primary text-sm font-medium"
+                    >
+                      Recuperar senha
+                    </Link>
                   </div>
                   <Button type="submit" className="mt-2 w-full">
-                    Create an account
+                    Entrar
                   </Button>
                   <Button variant="outline" className="w-full">
                     <FcGoogle className="mr-2 size-5" />
-                    Sign up with Google
+                    Entrar com Google
                   </Button>
                 </div>
                 <div className="text-muted-foreground mx-auto mt-8 flex justify-center gap-1 text-sm">
-                  <p>Don&apos;t have an account?</p>
+                  <p>Precisa operar via API?</p>
                   <Link href="/signup" className="text-primary font-medium">
-                    Sign up
+                    Falar com CEO
                   </Link>
                 </div>
               </CardContent>

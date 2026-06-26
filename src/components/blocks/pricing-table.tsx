@@ -23,23 +23,23 @@ interface FeatureSection {
 
 const pricingPlans = [
   {
-    name: "Free",
+    name: "Taxa",
     button: {
-      text: "Get started",
+      text: "Integrar via API",
       variant: "outline" as const,
     },
   },
   {
-    name: "Startup",
+    name: "Repasse",
     button: {
-      text: "Get started",
+      text: "Falar com CEO",
       variant: "outline" as const,
     },
   },
   {
-    name: "Enterprise",
+    name: "Proteção",
     button: {
-      text: "Get a demo",
+      text: "Falar com CEO",
       variant: "outline" as const,
     },
   },
@@ -47,69 +47,69 @@ const pricingPlans = [
 
 const comparisonFeatures: FeatureSection[] = [
   {
-    category: "Usage",
+    category: "Operação",
     features: [
       {
-        name: "Members",
-        free: "Unlimited",
-        startup: "Unlimited",
-        enterprise: "Unlimited",
+        name: "Pix recebido",
+        free: "Total recebido",
+        startup: "Total recebido",
+        enterprise: "Total recebido",
       },
       {
-        name: "Transactions",
-        free: "250",
-        startup: "Unlimited",
-        enterprise: "Unlimited",
+        name: "Transações processadas",
+        free: "Processadas",
+        startup: "Processadas",
+        enterprise: "Processadas",
       },
       {
-        name: "Teams",
-        free: "2",
-        startup: "Unlimited",
-        enterprise: "Unlimited",
+        name: "Repasses",
+        free: "Pendentes",
+        startup: "Realizados",
+        enterprise: "Realizados",
       },
     ],
   },
   {
-    category: "Features",
+    category: "Dashboard",
     features: [
       {
-        name: "Reporting",
+        name: "Taxa aplicada",
         free: true,
         startup: true,
         enterprise: true,
       },
       {
-        name: "Analytics",
+        name: "Saldo líquido",
         free: true,
         startup: true,
         enterprise: true,
       },
       {
-        name: "Import and export",
+        name: "Eventos em análise",
         free: true,
         startup: true,
         enterprise: true,
       },
       {
-        name: "Integrations",
+        name: "API pública",
         free: true,
         startup: true,
         enterprise: true,
       },
       {
-        name: "Mainline AI",
+        name: "Operação via WhatsApp",
         free: null,
         startup: true,
         enterprise: true,
       },
       {
-        name: "Admin roles",
+        name: "Valor coberto pela LorenzoPay",
         free: null,
         startup: null,
         enterprise: true,
       },
       {
-        name: "Audit log",
+        name: "Registro completo de operações",
         free: null,
         startup: null,
         enterprise: true,
@@ -117,22 +117,22 @@ const comparisonFeatures: FeatureSection[] = [
     ],
   },
   {
-    category: "Support",
+    category: "Proteção",
     features: [
       {
-        name: "Priority Support",
+        name: "Análise de risco",
         free: true,
         startup: true,
         enterprise: true,
       },
       {
-        name: "Account Manager",
+        name: "Gestão interna de eventos",
         free: null,
         startup: null,
         enterprise: true,
       },
       {
-        name: "Uptime SLA",
+        name: "Cobertura financeira total",
         free: null,
         startup: null,
         enterprise: true,
@@ -161,7 +161,7 @@ const renderFeatureValue = (value: true | false | null | string) => {
 };
 
 export const PricingTable = () => {
-  const [selectedPlan, setSelectedPlan] = useState(1); // Default to Startup plan
+  const [selectedPlan, setSelectedPlan] = useState(1); // Default to Repasse plan
 
   return (
     <section className="pb-28 lg:py-32">
@@ -213,7 +213,7 @@ const PlanHeaders = ({
                   <Button
                     size="lg"
                     variant="secondary"
-                    key={index}
+                    key={plan.name}
                     onClick={() => {
                       onPlanChange(index);
                       setIsOpen(false);
@@ -231,8 +231,8 @@ const PlanHeaders = ({
       <div className="grid grid-cols-4 gap-4 max-md:hidden">
         <div className="col-span-1 max-md:hidden"></div>
 
-        {pricingPlans.map((plan, index) => (
-          <div key={index} className="">
+        {pricingPlans.map((plan) => (
+          <div key={plan.name} className="">
             <h3 className="mb-3 text-2xl font-semibold">{plan.name}</h3>
             <Button variant={plan.button.variant} className="">
               {plan.button.text}
@@ -246,14 +246,14 @@ const PlanHeaders = ({
 
 const FeatureSections = ({ selectedPlan }: { selectedPlan: number }) => (
   <>
-    {comparisonFeatures.map((section, sectionIndex) => (
-      <div key={sectionIndex} className="">
+    {comparisonFeatures.map((section) => (
+      <div key={section.category} className="">
         <div className="border-primary/40 border-b py-4">
           <h3 className="text-lg font-semibold">{section.category}</h3>
         </div>
-        {section.features.map((feature, featureIndex) => (
+        {section.features.map((feature) => (
           <div
-            key={featureIndex}
+            key={feature.name}
             className="text-foreground grid grid-cols-2 font-medium max-md:border-b md:grid-cols-4"
           >
             <span className="inline-flex items-center py-4">
@@ -271,16 +271,18 @@ const FeatureSections = ({ selectedPlan }: { selectedPlan: number }) => (
             </div>
             {/* Desktop View - All Plans */}
             <div className="hidden md:col-span-3 md:grid md:grid-cols-3 md:gap-4">
-              {[feature.free, feature.startup, feature.enterprise].map(
-                (value, i) => (
+              {[
+                { plan: "Free", value: feature.free },
+                { plan: "Startup", value: feature.startup },
+                { plan: "Enterprise", value: feature.enterprise },
+              ].map(({ plan, value }) => (
                   <div
-                    key={i}
+                    key={plan}
                     className="flex items-center gap-1 border-b py-4"
                   >
                     {renderFeatureValue(value)}
                   </div>
-                ),
-              )}
+                ))}
             </div>
           </div>
         ))}

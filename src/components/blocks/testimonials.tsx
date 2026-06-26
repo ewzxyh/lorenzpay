@@ -1,10 +1,20 @@
-import Image from "next/image";
+import type { ElementType } from "react";
 
-import { ArrowRight } from "lucide-react";
+import type { IconProps } from "@solar-icons/react";
+import {
+  CardReceive,
+  ChatSquareCheck,
+  CheckCircle,
+  ClockCircle,
+  DangerTriangle,
+  ForbiddenCircle,
+  ShieldCheck,
+  ShieldWarning,
+  WalletMoney,
+} from "@solar-icons/react";
 
 import { DashedLine } from "../dashed-line";
 
-import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import {
   Carousel,
@@ -15,62 +25,87 @@ import {
 } from "@/components/ui/carousel";
 import { cn } from "@/lib/utils";
 
-const items = [
+type TestimonialItem = {
+  quote: string;
+  author: string;
+  role: string;
+  company: string;
+  icon: ElementType<IconProps>;
+  color: string;
+};
+
+const items: TestimonialItem[] = [
   {
-    quote: "We're misusing Mainline as a CRM and it still works!",
-    author: "Amy Chase",
-    role: "PM",
-    company: "Mercury Finance",
-    image: "/testimonials/amy-chase.webp",
+    quote: "Contestação MED aberta contra uma venda legítima.",
+    author: "Problema",
+    role: "MED 2.0",
+    company: "Pix contestado",
+    icon: DangerTriangle,
+    color: "#fb7185",
   },
   {
-    quote: "I was able to replace 80% of my team with Mainline bots.",
-    author: "Jonas Kotara",
-    role: "Lead Engineer",
-    company: "Mercury Finance",
-    image: "/testimonials/jonas-kotara.webp",
+    quote: "Saldo retido e caixa pressionado.",
+    author: "Consequência",
+    role: "Dinheiro parado",
+    company: "Operação travada",
+    icon: WalletMoney,
+    color: "#f59e0b",
   },
   {
-    quote: "Founder Mode is hard enough without having a really nice PM app.",
-    author: "Kevin Yam",
-    role: "Founder",
-    company: "Mercury Finance",
-    image: "/testimonials/kevin-yam.webp",
+    quote: "Risco de bloqueio e perda da conta.",
+    author: "Consequência",
+    role: "Conta em risco",
+    company: "MED 2.0",
+    icon: ForbiddenCircle,
+    color: "#fb7185",
   },
   {
-    quote: "I can use the tool as a substitute from my PM.",
-    author: "Kundo Marta",
-    role: "Founder",
-    company: "Mercury Finance",
-    image: "/testimonials/kundo-marta.webp",
+    quote: "Prejuízo direto quando a defesa falha.",
+    author: "Consequência",
+    role: "Perda financeira",
+    company: "Impacto imediato",
+    icon: ShieldWarning,
+    color: "#f43f5e",
   },
   {
-    quote: "We're misusing Mainline as a CRM and it still works!",
-    author: "Amy Chase",
-    role: "PM",
-    company: "Mercury Finance",
-    image: "/testimonials/amy-chase.webp",
+    quote: "Defesa MED conduzida pela LorenzoPay.",
+    author: "Solução",
+    role: "Defesa estruturada",
+    company: "LorenzoPay",
+    icon: ShieldCheck,
+    color: "#22c55e",
   },
   {
-    quote: "I was able to replace 80% of my team with Mainline bots.",
-    author: "Jonas Kotara",
-    role: "Lead Engineer",
-    company: "Mercury Finance",
-    image: "/testimonials/jonas-kotara.webp",
+    quote: "Comprovantes enviados e organizados pelo WhatsApp.",
+    author: "Solução",
+    role: "Evidências",
+    company: "LorenzoPay",
+    icon: ChatSquareCheck,
+    color: "#22c55e",
   },
   {
-    quote: "Founder Mode is hard enough without having a really nice PM app.",
-    author: "Kevin Yam",
-    role: "Founder",
-    company: "Mercury Finance",
-    image: "/testimonials/kevin-yam.webp",
+    quote: "Cobertura financeira para eventos elegíveis.",
+    author: "Solução",
+    role: "Proteção",
+    company: "LorenzoPay",
+    icon: CheckCircle,
+    color: "#22c55e",
   },
   {
-    quote: "I can use the tool as a substitute from my PM.",
-    author: "Kundo Marta",
-    role: "Founder",
-    company: "Mercury Finance",
-    image: "/testimonials/kundo-marta.webp",
+    quote: "Repasse enviado após o comprovante da transação.",
+    author: "Solução",
+    role: "Recebimento",
+    company: "LorenzoPay",
+    icon: CardReceive,
+    color: "#60a5fa",
+  },
+  {
+    quote: "Sem tempo perdido com contestação Pix.",
+    author: "Solução",
+    role: "Operação protegida",
+    company: "LorenzoPay",
+    icon: ClockCircle,
+    color: "#a855f7",
   },
 ];
 
@@ -83,20 +118,19 @@ export const Testimonials = ({
 }) => {
   return (
     <>
-      <section className={cn("overflow-hidden py-28 lg:py-32", className)}>
+      <section
+        id="problem"
+        className={cn("overflow-hidden py-28 lg:py-32", className)}
+      >
         <div className="container">
           <div className="space-y-4">
             <h2 className="text-2xl tracking-tight md:text-4xl lg:text-5xl">
-              Trusted by product builders
+              O problema do MED
             </h2>
             <p className="text-muted-foreground max-w-md leading-snug">
-              Mainline is built on the habits that make the best product teams
-              successful: staying focused, moving quickly, and always aiming for
-              high-quality work.
+              Uma contestação Pix pode reter saldo, bloquear a operação e gerar
+              prejuízo. A LorenzoPay assume a defesa e protege seu caixa.
             </p>
-            <Button variant="outline" className="shadow-md">
-              Read our Customer Stories <ArrowRight className="size-4" />
-            </Button>
           </div>
 
           <div className="relative mt-8 -mr-[max(3rem,calc((100vw-80rem)/2+3rem))] md:mt-12 lg:mt-20">
@@ -108,19 +142,23 @@ export const Testimonials = ({
               className="w-full"
             >
               <CarouselContent className="">
-                {items.map((testimonial, index) => (
-                  <CarouselItem
-                    key={index}
-                    className="xl:basis-1/3.5 grow basis-4/5 sm:basis-3/5 md:basis-2/5 lg:basis-[28%] 2xl:basis-[24%]"
-                  >
+                {items.map((testimonial) => {
+                  const Icon = testimonial.icon;
+
+                  return (
+                    <CarouselItem
+                      key={testimonial.quote}
+                      className="xl:basis-1/3.5 grow basis-4/5 sm:basis-3/5 md:basis-2/5 lg:basis-[28%] 2xl:basis-[24%]"
+                    >
                     <Card className="bg-muted h-full overflow-hidden border-none">
                       <CardContent className="flex h-full flex-col p-0">
-                        <div className="relative h-[288px] lg:h-[328px]">
-                          <Image
-                            src={testimonial.image}
-                            alt={testimonial.author}
-                            fill
-                            className="object-cover object-top"
+                        <div className="grid h-[288px] place-items-center bg-background/70 lg:h-[328px]">
+                          <Icon
+                            aria-hidden="true"
+                            className="block"
+                            color={testimonial.color}
+                            style={{ height: "9rem", width: "9rem" }}
+                            weight="BoldDuotone"
                           />
                         </div>
                         <div className="flex flex-1 flex-col justify-between gap-10 p-6">
@@ -138,8 +176,9 @@ export const Testimonials = ({
                         </div>
                       </CardContent>
                     </Card>
-                  </CarouselItem>
-                ))}
+                    </CarouselItem>
+                  );
+                })}
               </CarouselContent>
               <div className="mt-8 flex gap-3">
                 <CarouselPrevious className="bg-muted hover:bg-muted/80 static size-14.5 translate-x-0 translate-y-0 transition-colors [&>svg]:size-6 lg:[&>svg]:size-8" />

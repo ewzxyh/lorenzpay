@@ -10,52 +10,41 @@ import { cn } from "@/lib/utils";
 
 const categories = [
   {
-    title: "Support",
+    title: "Operação",
     questions: [
       {
-        question: "How do I update my account without breaking my laptop?",
+        question: "A LorenzoPay é banco?",
         answer:
-          "Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus voluptates deserunt officia temporibus dignissimos.",
+          "Não. É uma infraestrutura de processamento e repasse de pagamentos Pix.",
       },
       {
-        question: "Is support free, or do I need to Google everything?",
+        question: "Quando recebo o dinheiro?",
         answer:
-          "Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus voluptates deserunt officia temporibus dignissimos.",
+          "Após envio dos comprovantes via WhatsApp junto com a chave pix para receber",
       },
       {
-        question: "Are you going to be subsumed by AI?",
+        question: "Preciso integrar via API?",
+        answer: "Não. Também é possível operar via WhatsApp.",
+      },
+      {
+        question: "Qual a taxa da LorenzoPay?",
         answer:
-          "Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus voluptates deserunt officia temporibus dignissimos.",
+          "É 10%, pois garantimos que não haverá nenhum problema relacionada a contestação de MED 2.0.",
       },
     ],
   },
   {
-    title: "Your account",
+    title: "Proteção",
     questions: [
       {
-        question: "Is support free, or do I need to Google everything?",
+        question: "O que acontece em caso de contestação?",
         answer:
-          "Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus voluptates deserunt officia temporibus dignissimos.",
+          "A LorenzoPay garante vitória na defesa contra 100% contra contestações de PIX (MED), caso contrário cobrimos integralmente os impactos financeiross.",
       },
       {
-        question: "Are you going to be subsumed by AI?",
+        question: "Que risco financeiro é assumido?",
         answer:
-          "Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus voluptates deserunt officia temporibus dignissimos.",
-      },
-    ],
-  },
-  {
-    title: "Other questions",
-    questions: [
-      {
-        question: "Is support free, or do I need to Google everything?",
-        answer:
-          "Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus voluptates deserunt officia temporibus dignissimos.",
-      },
-      {
-        question: "Are you going to be subsumed by AI?",
-        answer:
-          "Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus voluptates deserunt officia temporibus dignissimos.",
+          "A LorenzoPay assume integralmente o risco financeiro de contestações elegíveis relacionadas às transações processadas em sua infraestrutura.",
       },
     ],
   },
@@ -71,37 +60,37 @@ export const FAQ = ({
   className2?: string;
 }) => {
   return (
-    <section className={cn("py-28 lg:py-32", className)}>
+    <section id="faq" className={cn("py-28 lg:py-32", className)}>
       <div className="container max-w-5xl">
         <div className={cn("mx-auto grid gap-16 lg:grid-cols-2", className2)}>
           <div className="space-y-4">
             {headerTag === "h1" ? (
               <h1 className="text-2xl tracking-tight md:text-4xl lg:text-5xl">
-                Got Questions?
+                FAQ
               </h1>
             ) : (
               <h2 className="text-2xl tracking-tight md:text-4xl lg:text-5xl">
-                Got Questions?
+                FAQ
               </h2>
             )}
             <p className="text-muted-foreground max-w-md leading-snug lg:mx-auto">
-              If you can't find what you're looking for,{" "}
+              Se precisar operar via API ou WhatsApp,{" "}
               <Link href="/contact" className="underline underline-offset-4">
-                get in touch
+                fale com a LorenzoPay
               </Link>
               .
             </p>
           </div>
 
           <div className="grid gap-6 text-start">
-            {categories.map((category, categoryIndex) => (
+            {categories.map((category) => (
               <div key={category.title} className="">
                 <h3 className="text-muted-foreground border-b py-4">
                   {category.title}
                 </h3>
                 <Accordion type="single" collapsible className="w-full">
-                  {category.questions.map((item, i) => (
-                    <AccordionItem key={i} value={`${categoryIndex}-${i}`}>
+                  {category.questions.map((item) => (
+                    <AccordionItem key={item.question} value={item.question}>
                       <AccordionTrigger>{item.question}</AccordionTrigger>
                       <AccordionContent className="text-muted-foreground">
                         {item.answer}

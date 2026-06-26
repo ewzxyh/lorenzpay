@@ -1,7 +1,6 @@
 "use client";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { Check } from "lucide-react";
-import { motion } from "motion/react";
 import { useAction } from "next-safe-action/hooks";
 import { useForm } from "react-hook-form";
 import * as z from "zod";
@@ -59,32 +58,17 @@ export function ContactForm() {
   if (hasSucceeded) {
     return (
       <div className="w-full gap-2 rounded-md border p-2 sm:p-5 md:p-8">
-        <motion.div
-          initial={{ opacity: 0, y: -16 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.4, stiffness: 300, damping: 25 }}
-          className="h-full px-3 py-6"
-        >
-          <motion.div
-            initial={{ scale: 0.5 }}
-            animate={{ scale: 1 }}
-            transition={{
-              delay: 0.3,
-              type: "spring",
-              stiffness: 500,
-              damping: 15,
-            }}
-            className="mx-auto mb-4 flex w-fit justify-center rounded-full border p-2"
-          >
+        <div className="h-full px-3 py-6">
+          <div className="mx-auto mb-4 flex w-fit justify-center rounded-full border p-2">
             <Check className="size-8" />
-          </motion.div>
+          </div>
           <h2 className="mb-2 text-center text-2xl font-bold text-pretty">
-            Thank you
+            Obrigado
           </h2>
           <p className="text-muted-foreground text-center text-lg text-pretty">
-            Form submitted successfully, we will get back to you soon
+            Solicitação enviada. A LorenzoPay entrará em contato em breve.
           </p>
-        </motion.div>
+        </div>
       </div>
     );
   }
@@ -101,7 +85,7 @@ export function ContactForm() {
           rules={{ required: true }}
           render={({ field }) => (
             <FormItem className="w-full">
-              <FormLabel>Full name * </FormLabel>
+              <FormLabel>Nome completo * </FormLabel>
               <FormControl>
                 <Input
                   type="text"
@@ -110,7 +94,7 @@ export function ContactForm() {
                     const val = e.target.value;
                     field.onChange(val);
                   }}
-                  placeholder="First and last name"
+                  placeholder="Nome e sobrenome"
                 />
               </FormControl>
 
@@ -124,7 +108,7 @@ export function ContactForm() {
           rules={{ required: true }}
           render={({ field }) => (
             <FormItem className="w-full">
-              <FormLabel>Email address * </FormLabel>
+              <FormLabel>Email * </FormLabel>
               <FormControl>
                 <Input
                   type="text"
@@ -147,7 +131,7 @@ export function ContactForm() {
           rules={{ required: false }}
           render={({ field }) => (
             <FormItem className="w-full">
-              <FormLabel>Company name </FormLabel>
+              <FormLabel>Empresa </FormLabel>
               <FormControl>
                 <Input
                   type="text"
@@ -156,7 +140,7 @@ export function ContactForm() {
                     const val = e.target.value;
                     field.onChange(val);
                   }}
-                  placeholder="Company name"
+                  placeholder="Nome da empresa"
                 />
               </FormControl>
 
@@ -178,11 +162,11 @@ export function ContactForm() {
             ];
             return (
               <FormItem className="w-full">
-                <FormLabel>Number of employees </FormLabel>
+                <FormLabel>Volume de operação </FormLabel>
                 <Select onValueChange={field.onChange} value={field.value}>
                   <FormControl>
                     <SelectTrigger className="w-full">
-                      <SelectValue placeholder="e.g. 11-50" />
+                      <SelectValue placeholder="ex: 11-50" />
                     </SelectTrigger>
                   </FormControl>
                   <SelectContent>
@@ -206,11 +190,11 @@ export function ContactForm() {
           rules={{ required: true }}
           render={({ field }) => (
             <FormItem>
-              <FormLabel>Your message * </FormLabel>
+              <FormLabel>Mensagem * </FormLabel>
               <FormControl>
                 <Textarea
                   {...field}
-                  placeholder="Write your message"
+                  placeholder="Descreva sua operação Pix"
                   className="resize-none"
                 />
               </FormControl>
@@ -233,7 +217,7 @@ export function ContactForm() {
                 />
               </FormControl>
               <div className="space-y-1 leading-none">
-                <FormLabel>I agree to the terms and conditions</FormLabel>
+                <FormLabel>Concordo com os termos e condições</FormLabel>
 
                 <FormMessage />
               </div>
@@ -242,7 +226,7 @@ export function ContactForm() {
         />
         <div className="flex w-full items-center justify-end pt-3">
           <Button className="rounded-lg" size="sm">
-            {isExecuting ? "Submitting..." : "Submit"}
+            {isExecuting ? "Enviando..." : "Enviar"}
           </Button>
         </div>
       </form>

@@ -1,134 +1,108 @@
-"use client";
-
-import { useState } from "react";
-
+import { WalletMoney } from "@solar-icons/react";
 import { Check } from "lucide-react";
 
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
-import { Switch } from "@/components/ui/switch";
 import { cn } from "@/lib/utils";
 
-const plans = [
-  {
-    name: "Free",
-    monthlyPrice: "$0",
-    yearlyPrice: "$0",
-    description: "Free for everyone",
-    features: [
-      "Unlimited members",
-      "2 teams",
-      "500 issues",
-      "Slack and Github integrations",
-    ],
-  },
-  {
-    name: "Startup",
-    monthlyPrice: "$8",
-    yearlyPrice: "$6",
-    features: [
-      "All free plan features and...",
-      "Mainline AI",
-      "Unlimited teams",
-      "Unlimited issues and file uploads",
-      "Mainline Insights",
-      "Admin roles",
-    ],
-  },
-  {
-    name: "Enterprise",
-    monthlyPrice: "$8",
-    yearlyPrice: "$6",
-    features: [
-      "All free plan features and...",
-      "Mainline AI",
-      "Supermainline AGI",
-      "Free daily catered lunch",
-      "random HIPPA audits",
-    ],
-  },
-];
+const plan = {
+  name: "Taxa",
+  price: "10%",
+  description: "Sobre valores processados",
+  features: [
+    "Taxa única sobre valores processados",
+    "Repasse líquido direto para sua conta",
+    "Cobertura financeira em eventos elegíveis",
+    "Operação simples via WhatsApp",
+  ],
+};
 
 export const Pricing = ({ className }: { className?: string }) => {
-  const [isAnnual, setIsAnnual] = useState(true);
-
   return (
-    <section className={cn("py-28 lg:py-32", className)}>
+    <section id="pricing" className={cn("py-28 lg:py-32", className)}>
       <div className="container max-w-5xl">
         <div className="space-y-4 text-center">
           <h2 className="text-2xl tracking-tight md:text-4xl lg:text-5xl">
-            Pricing
+            Quanto custa a LorenzoPay?
           </h2>
           <p className="text-muted-foreground mx-auto max-w-xl leading-snug text-balance">
-            Use Mainline for free with your whole team. Upgrade to enable
-            unlimited issues, enhanced security controls, and additional
-            features.
+            10% sobre valores processados. Após processamento, o valor líquido
+            é enviado para a empresa em minutos ou no ciclo diário.
           </p>
         </div>
 
-        <div className="mt-8 grid items-start gap-5 text-start md:mt-12 md:grid-cols-3 lg:mt-20">
-          {plans.map((plan) => (
-            <Card
-              key={plan.name}
-              className={`${
-                plan.name === "Startup"
-                  ? "outline-primary origin-top outline-4"
-                  : ""
-              }`}
-            >
-              <CardContent className="flex flex-col gap-7 px-6 py-5">
-                <div className="space-y-2">
-                  <h3 className="text-foreground font-semibold">{plan.name}</h3>
-                  <div className="space-y-1">
-                    <div className="text-muted-foreground text-lg font-medium">
-                      {isAnnual ? plan.yearlyPrice : plan.monthlyPrice}{" "}
-                      {plan.name !== "Free" && (
-                        <span className="text-muted-foreground">
-                          per user/
-                          {isAnnual ? "year" : "month"}
-                        </span>
-                      )}
-                    </div>
-                  </div>
+        <Card className="relative mx-auto mt-8 max-w-4xl overflow-hidden md:mt-12 lg:mt-20">
+          <style>
+            {`.pricing-card-icon {
+                display: none;
+              }
+
+              @media (min-width: 768px) {
+              .pricing-card-content {
+                align-items: center;
+                display: flex;
+                flex-direction: row;
+                justify-content: space-between;
+                padding: 3rem 14rem 3rem 3rem;
+              }
+
+              .pricing-card-column {
+                width: 50%;
+              }
+
+              .pricing-card-icon {
+                display: block;
+              }
+            }`}
+          </style>
+          <WalletMoney
+            aria-hidden="true"
+            className="pricing-card-icon pointer-events-none text-muted-foreground"
+            color="currentColor"
+            style={{
+              height: "20rem",
+              opacity: 0.28,
+              position: "absolute",
+              right: "-2rem",
+              top: "46%",
+              transform: "translateY(-50%)",
+              width: "20rem",
+            }}
+            weight="BoldDuotone"
+          />
+          <CardContent className="pricing-card-content relative flex flex-col gap-8 px-8 py-10 text-start">
+            <div className="pricing-card-column space-y-5">
+              <div className="space-y-2">
+                <h3 className="text-foreground font-semibold">{plan.name}</h3>
+                <div className="text-muted-foreground text-3xl font-medium">
+                  {plan.price}
                 </div>
+                <p className="text-muted-foreground text-sm">
+                  {plan.description}
+                </p>
+              </div>
 
-                {plan.name !== "Free" ? (
-                  <div className="flex items-center gap-2">
-                    <Switch
-                      checked={isAnnual}
-                      onCheckedChange={() => setIsAnnual(!isAnnual)}
-                      aria-label="Toggle annual billing"
-                    />
-                    <span className="text-sm font-medium">Billed annually</span>
-                  </div>
-                ) : (
-                  <span className="text-muted-foreground text-sm">
-                    {plan.description}
-                  </span>
-                )}
+              <Button
+                className="w-fit text-black dark:text-white"
+                variant="outline"
+              >
+                Falar com CEO
+              </Button>
+            </div>
 
-                <div className="space-y-3">
-                  {plan.features.map((feature) => (
-                    <div
-                      key={feature}
-                      className="text-muted-foreground flex items-center gap-1.5"
-                    >
-                      <Check className="size-5 shrink-0" />
-                      <span className="text-sm">{feature}</span>
-                    </div>
-                  ))}
-                </div>
-
-                <Button
-                  className="w-fit"
-                  variant={plan.name === "Startup" ? "default" : "outline"}
+            <div className="pricing-card-column grid gap-3 sm:grid-cols-2 md:grid-cols-1">
+              {plan.features.map((feature) => (
+                <div
+                  key={feature}
+                  className="text-muted-foreground flex items-center gap-1.5"
                 >
-                  Get started
-                </Button>
-              </CardContent>
-            </Card>
-          ))}
-        </div>
+                  <Check className="size-5 shrink-0" />
+                  <span className="text-sm">{feature}</span>
+                </div>
+              ))}
+            </div>
+          </CardContent>
+        </Card>
       </div>
     </section>
   );

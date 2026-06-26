@@ -112,12 +112,21 @@ const Carousel = React.forwardRef<
         return;
       }
 
-      onSelect(api);
-      api.on("reInit", onSelect);
-      api.on("select", onSelect);
+      let isActive = true;
+      const updateScrollState = () => {
+        if (isActive) {
+          onSelect(api);
+        }
+      };
+
+      queueMicrotask(updateScrollState);
+      api.on("reInit", updateScrollState);
+      api.on("select", updateScrollState);
 
       return () => {
-        api?.off("select", onSelect);
+        isActive = false;
+        api.off("reInit", updateScrollState);
+        api.off("select", updateScrollState);
       };
     }, [api, onSelect]);
 
