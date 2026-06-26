@@ -1,6 +1,6 @@
 import Link from "next/link";
 
-import { ArrowLeft } from "lucide-react";
+import { ArrowLeft } from "@solar-icons/react/ssr";
 
 import { Background } from "@/components/background";
 import { Button } from "@/components/ui/button";
@@ -22,7 +22,10 @@ export default function NotFound() {
           <div className="flex flex-col items-center gap-4 sm:flex-row sm:justify-center">
             <Button asChild size="lg" className="group min-w-[200px] gap-2">
               <Link href="/">
-                <ArrowLeft className="size-5 transition-transform group-hover:-translate-x-1" />
+                <ArrowLeft
+                  className="size-5 transition-transform group-hover:-translate-x-1"
+                  weight="BoldDuotone"
+                />
                 Voltar ao início
               </Link>
             </Button>

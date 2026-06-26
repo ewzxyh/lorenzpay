@@ -1,8 +1,8 @@
 import Image from "next/image";
-import Link from "next/link";
 
 import { Button } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
+import { WHATSAPP_CTA_URL } from "@/lib/whatsapp";
 
 const About = () => {
   return (
@@ -25,7 +25,7 @@ const About = () => {
             "A cobertura financeira total se aplica aos eventos elegíveis conforme regras operacionais.",
           ]}
           ctaButton={{
-            href: "/careers",
+            href: WHATSAPP_CTA_URL,
             text: "Falar com CEO",
           }}
         />
@@ -103,9 +103,15 @@ export function TextSection({
       </div>
       {ctaButton && (
         <div className="mt-8">
-          <Link href={ctaButton.href}>
-            <Button size="lg">{ctaButton.text}</Button>
-          </Link>
+          <Button size="lg" asChild>
+            <a
+              href={ctaButton.href}
+              rel="noopener noreferrer"
+              target="_blank"
+            >
+              {ctaButton.text}
+            </a>
+          </Button>
         </div>
       )}
     </section>

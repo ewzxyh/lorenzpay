@@ -2,7 +2,7 @@ import { DashedLine } from "@/components/dashed-line";
 
 const stats = [
   {
-    value: "10%",
+    value: "6%",
     label: "Taxa sobre processado",
   },
   {

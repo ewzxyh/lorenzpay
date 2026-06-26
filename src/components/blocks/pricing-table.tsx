@@ -2,7 +2,11 @@
 
 import { useState } from "react";
 
-import { Check, ChevronsUpDown, X } from "lucide-react";
+import {
+  CheckCircle,
+  CloseCircle,
+  RoundSortVertical,
+} from "@solar-icons/react/ssr";
 
 import { Button } from "@/components/ui/button";
 import {
@@ -10,6 +14,7 @@ import {
   CollapsibleContent,
   CollapsibleTrigger,
 } from "@/components/ui/collapsible";
+import { WHATSAPP_CTA_URL } from "@/lib/whatsapp";
 
 interface FeatureSection {
   category: string;
@@ -143,10 +148,10 @@ const comparisonFeatures: FeatureSection[] = [
 
 const renderFeatureValue = (value: true | false | null | string) => {
   if (value === true) {
-    return <Check className="size-5" />;
+    return <CheckCircle className="size-5" weight="Bold" />;
   }
   if (value === false) {
-    return <X className="size-5" />;
+    return <CloseCircle className="size-5" weight="Bold" />;
   }
   if (value === null) {
     return null;
@@ -154,7 +159,7 @@ const renderFeatureValue = (value: true | false | null | string) => {
   // String value
   return (
     <div className="flex items-center gap-2">
-      <Check className="size-4" />
+      <CheckCircle className="size-4" weight="Bold" />
       <span className="text-muted-foreground">{value}</span>
     </div>
   );
@@ -195,15 +200,23 @@ const PlanHeaders = ({
               <h3 className="text-2xl font-semibold">
                 {pricingPlans[selectedPlan].name}
               </h3>
-              <ChevronsUpDown
+              <RoundSortVertical
                 className={`size-5 transition-transform ${isOpen ? "rotate-180" : ""}`}
+                weight="BoldDuotone"
               />
             </CollapsibleTrigger>
             <Button
+              asChild
               variant={pricingPlans[selectedPlan].button.variant}
               className="w-fit"
             >
-              {pricingPlans[selectedPlan].button.text}
+              <a
+                href={WHATSAPP_CTA_URL}
+                rel="noopener noreferrer"
+                target="_blank"
+              >
+                {pricingPlans[selectedPlan].button.text}
+              </a>
             </Button>
           </div>
           <CollapsibleContent className="flex flex-col space-y-2 p-2">
@@ -234,8 +247,14 @@ const PlanHeaders = ({
         {pricingPlans.map((plan) => (
           <div key={plan.name} className="">
             <h3 className="mb-3 text-2xl font-semibold">{plan.name}</h3>
-            <Button variant={plan.button.variant} className="">
-              {plan.button.text}
+            <Button asChild variant={plan.button.variant} className="">
+              <a
+                href={WHATSAPP_CTA_URL}
+                rel="noopener noreferrer"
+                target="_blank"
+              >
+                {plan.button.text}
+              </a>
             </Button>
           </div>
         ))}

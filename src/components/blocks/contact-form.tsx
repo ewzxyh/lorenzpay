@@ -1,6 +1,6 @@
 "use client";
 import { zodResolver } from "@hookform/resolvers/zod";
-import { Check } from "lucide-react";
+import { CheckCircle } from "@solar-icons/react/ssr";
 import { useAction } from "next-safe-action/hooks";
 import { useForm } from "react-hook-form";
 import * as z from "zod";
@@ -56,7 +56,7 @@ export function ContactForm() {
       <div className="w-full gap-2 rounded-md border p-2 sm:p-5 md:p-8">
         <div className="h-full px-3 py-6">
           <div className="mx-auto mb-4 flex w-fit justify-center rounded-full border p-2">
-            <Check className="size-8" />
+            <CheckCircle className="size-8" weight="Bold" />
           </div>
           <h2 className="mb-2 text-center text-2xl font-bold text-pretty">
             Obrigado

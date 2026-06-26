@@ -1,58 +1,67 @@
-import Image from "next/image";
 import Link from "next/link";
 
 import {
-  Blend,
-  ChartNoAxesColumn,
-  CircleDot,
-  Diamond,
-} from "lucide-react";
+  GraphDown,
+  LockKeyhole,
+  ShieldCheck,
+  Wallet,
+} from "@solar-icons/react/ssr";
 
 import { DashedLine } from "@/components/dashed-line";
 import { Button } from "@/components/ui/button";
+import { WHATSAPP_CTA_URL } from "@/lib/whatsapp";
 
 const features = [
   {
     title: "Defesa MED",
-    description: "A LorenzPay conduz a defesa contra contestações Pix.",
-    icon: CircleDot,
+    description: "Conduzimos a defesa contra contestações PIX com 100% de sucesso.",
+    icon: ShieldCheck,
   },
   {
     title: "Menos prejuízo",
     description:
       "Reduza em 100% perdas causadas por MED, fraude e chargebacks Pix.",
-    icon: Blend,
+    icon: GraphDown,
   },
   {
     title: "Conta protegida",
-    description: "Evite instabilidade e bloqueios gerados por contestações.",
-    icon: Diamond,
+    description: "Evite alerta de fraude e bloqueios gerados por contestações.",
+    icon: LockKeyhole,
   },
   {
     title: "Cobertura total",
     description: "Cobrimos impactos financeiros de eventos elegíveis.",
-    icon: ChartNoAxesColumn,
+    icon: Wallet,
   },
 ];
 
 export const Hero = () => {
   return (
     <section className="py-28 lg:py-32 lg:pt-44">
-      <div className="container flex flex-col justify-between gap-8 md:gap-14 lg:flex-row lg:gap-20">
+      <div className="container flex flex-col justify-between gap-8 md:gap-14 lg:flex-row lg:gap-20 2xl:translate-x-15">
         {/* Left side - Main content */}
         <div className="flex-1">
           <h1 className="text-foreground max-w-3xl text-3xl leading-tight tracking-tight text-balance md:text-4xl lg:text-5xl">
-            Diga adeus aos seus problemas com MED 2.0
+            Diga adeus aos seus problemas <strong>com MED</strong>
           </h1>
 
           <p className="text-muted-foreground mt-5 max-w-2xl text-lg leading-snug md:text-xl lg:text-2xl">
-            Receba Pix pela LorenzPay e deixe as contestações MED 2.0 conosco:
-            processamos, defendemos e cobrimos o risco financeiro.
+            Receba PIX pela LorenzPay e deixe as contestações conosco:
+            comunicação direta com Banco Central e cobrimos o risco financeiro com 100% de segurança.
           </p>
 
           <div className="mt-8 flex flex-wrap items-center gap-4 lg:flex-nowrap">
             <Button asChild>
-              <Link href="/contact">Falar com CEO</Link>
+              <a
+                href={WHATSAPP_CTA_URL}
+                rel="noopener noreferrer"
+                target="_blank"
+              >
+                Falar com CEO
+              </a>
+            </Button>
+            <Button asChild variant="outline">
+              <Link href="/#faq">Dúvidas</Link>
             </Button>
           </div>
         </div>
@@ -71,7 +80,10 @@ export const Hero = () => {
             const Icon = feature.icon;
             return (
               <div key={feature.title} className="flex gap-2.5 lg:gap-5">
-                <Icon className="text-foreground mt-1 size-4 shrink-0 lg:size-5" />
+                <Icon
+                  className="text-foreground mt-1 size-4 shrink-0 lg:size-5"
+                  weight="BoldDuotone"
+                />
                 <div>
                   <h2 className="font-text text-foreground font-semibold">
                     {feature.title}
@@ -86,24 +98,6 @@ export const Hero = () => {
         </div>
       </div>
 
-      <div className="mt-12 aspect-square overflow-hidden max-lg:ml-4 md:mt-20 md:aspect-auto md:h-[520px] lg:container lg:mt-24 lg:h-[560px] xl:h-[600px]">
-        <div className="relative h-full w-full md:h-[793px]">
-          <Image
-            src="/hero-mobile.webp"
-            alt="Tabela mobile de transações Pix com status MED, repasses enviados e detalhes de cobertura financeira"
-            fill
-            sizes="100vw"
-            className="origin-top-left scale-115 rounded-lg rounded-br-none object-cover object-left-top max-lg:rounded-tr-none md:hidden"
-          />
-          <Image
-            src="/hero.webp"
-            alt="Tabela de transações Pix com status MED, repasses enviados e detalhes de cobertura financeira"
-            fill
-            sizes="100vw"
-            className="hidden origin-top-left scale-90 rounded-2xl object-cover object-left-top shadow-lg max-lg:rounded-tr-none md:block"
-          />
-        </div>
-      </div>
     </section>
   );
 };

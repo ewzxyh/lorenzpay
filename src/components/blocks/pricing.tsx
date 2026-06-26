@@ -1,18 +1,19 @@
-import { Check } from "lucide-react";
+import { CheckCircle } from "@solar-icons/react/ssr";
 
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { cn } from "@/lib/utils";
+import { WHATSAPP_CTA_URL } from "@/lib/whatsapp";
 
 const plan = {
   name: "Taxa",
-  price: "10%",
+  price: "6%",
   description: "Sobre valores processados",
   features: [
     "Taxa única sobre valores processados",
     "Repasse líquido direto para sua conta",
-    "Cobertura financeira em eventos elegíveis",
-    "Operação simples via WhatsApp",
+    "Cobertura financeira total em todos os casos",
+    "Operação simples e manual via WhatsApp",
   ],
 };
 
@@ -25,8 +26,9 @@ export const Pricing = ({ className }: { className?: string }) => {
             Quanto custa a LorenzPay?
           </h2>
           <p className="text-muted-foreground mx-auto max-w-xl leading-snug text-balance">
-            10% sobre valores processados. Após processamento, o valor líquido
-            é enviado para a empresa em minutos ou no ciclo diário.
+            6% sobre valores processados. Seu cliente faz o PIX para nossa conta, você envia
+            o comprovante por WhatsApp e já recebe seu dinheiro em qualquer chave pix.
+            <strong> 100% seguro e cobertura total.</strong>
           </p>
         </div>
 
@@ -82,10 +84,17 @@ export const Pricing = ({ className }: { className?: string }) => {
               </div>
 
               <Button
+                asChild
                 className="w-fit text-black dark:text-white"
                 variant="outline"
               >
-                Falar com CEO
+                <a
+                  href={WHATSAPP_CTA_URL}
+                  rel="noopener noreferrer"
+                  target="_blank"
+                >
+                  Falar com CEO
+                </a>
               </Button>
             </div>
 
@@ -95,7 +104,7 @@ export const Pricing = ({ className }: { className?: string }) => {
                   key={feature}
                   className="text-muted-foreground flex items-center gap-1.5"
                 >
-                  <Check className="size-5 shrink-0" />
+                  <CheckCircle className="size-5 shrink-0" weight="Bold" />
                   <span className="text-sm">{feature}</span>
                 </div>
               ))}

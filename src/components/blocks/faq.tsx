@@ -15,7 +15,7 @@ const categories = [
       {
         question: "A LorenzPay é banco?",
         answer:
-          "Não. É uma infraestrutura de processamento e repasse de pagamentos Pix.",
+          "Não. É uma infraestrutura de processamento e repasse de pagamentos Pix com comunicação direta com o Banco Central. Somos os primeiros e únicos no Brasil a garantir 100% de defesa contra contestações no PIX",
       },
       {
         question: "Quando recebo o dinheiro?",
@@ -23,13 +23,13 @@ const categories = [
           "Após envio dos comprovantes via WhatsApp junto com a chave pix para receber",
       },
       {
-        question: "Preciso integrar via API?",
-        answer: "Não. Também é possível operar via WhatsApp.",
+        question: "Como eu recebo o dinheiro?",
+        answer: "Operação simples e manual via WhatsApp. Seu cliente envia o pix para a gente, depois você envia o comprovante de pagamento do seu cliente e sua chave pix para receber.",
       },
       {
         question: "Qual a taxa da LorenzPay?",
         answer:
-          "É 10%, pois garantimos que não haverá nenhum problema relacionada a contestação de MED 2.0.",
+          "É 6%, pois garantimos que não haverá nenhum problema relacionada a contestação de PIX. Cobertura total de qualquer evento.",
       },
     ],
   },
@@ -44,7 +44,7 @@ const categories = [
       {
         question: "Que risco financeiro é assumido?",
         answer:
-          "A LorenzPay assume integralmente o risco financeiro de contestações elegíveis relacionadas às transações processadas em sua infraestrutura.",
+          "Você não assume nenhum risco. A LorenzPay assume integralmente qualquer risco financeiro de contestações relacionadas às transações processadas em nossa infraestrutura.",
       },
     ],
   },
@@ -66,11 +66,11 @@ export const FAQ = ({
           <div className="space-y-4">
             {headerTag === "h1" ? (
               <h1 className="text-2xl tracking-tight md:text-4xl lg:text-5xl">
-                FAQ
+                Dúvidas
               </h1>
             ) : (
               <h2 className="text-2xl tracking-tight md:text-4xl lg:text-5xl">
-                FAQ
+                Dúvidas
               </h2>
             )}
             <p className="text-muted-foreground max-w-md leading-snug lg:mx-auto">

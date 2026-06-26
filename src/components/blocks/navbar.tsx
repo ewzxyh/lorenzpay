@@ -12,13 +12,13 @@ import {
   NavigationMenuList,
 } from "@/components/ui/navigation-menu";
 import { cn } from "@/lib/utils";
+import { WHATSAPP_CTA_URL } from "@/lib/whatsapp";
 
 const ITEMS = [
   { label: "Fluxo", href: "/#feature-modern-teams" },
-  { label: "Proteção", href: "/#resource-allocation" },
   { label: "Problemas", href: "/#problem" },
   { label: "Taxa", href: "/#pricing" },
-  { label: "FAQ", href: "/#faq" },
+  { label: "Dúvidas", href: "/#faq" },
 ];
 
 export const Navbar = () => {
@@ -64,11 +64,15 @@ export const Navbar = () => {
 
         {/* Auth Buttons */}
         <div className="flex items-center gap-2.5">
-          <Link href="/contact" className="max-lg:hidden">
-            <Button variant="outline">
+          <Button asChild variant="outline" className="max-lg:hidden">
+            <a
+              href={WHATSAPP_CTA_URL}
+              rel="noopener noreferrer"
+              target="_blank"
+            >
               <span className="relative z-10">Falar com CEO</span>
-            </Button>
-          </Link>
+            </a>
+          </Button>
 
           {/* Hamburger Menu Button (Mobile Only) */}
           <button
@@ -116,11 +120,19 @@ export const Navbar = () => {
             </Link>
           ))}
         </nav>
-        <Link href="/contact" onClick={() => setIsMenuOpen(false)}>
-          <Button className="mt-5 w-full rounded-xl bg-[#4B4EFF] text-white hover:bg-[#4B4EFF]/90">
+        <Button
+          asChild
+          className="mt-5 w-full rounded-xl bg-[#4B4EFF] text-white hover:bg-[#4B4EFF]/90"
+        >
+          <a
+            href={WHATSAPP_CTA_URL}
+            onClick={() => setIsMenuOpen(false)}
+            rel="noopener noreferrer"
+            target="_blank"
+          >
             Falar com CEO
-          </Button>
-        </Link>
+          </a>
+        </Button>
       </div>
     </section>
   );

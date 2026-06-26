@@ -1,8 +1,8 @@
 import * as React from "react";
 
 import * as NavigationMenuPrimitive from "@radix-ui/react-navigation-menu";
+import { AltArrowDown } from "@solar-icons/react/ssr";
 import { cva } from "class-variance-authority";
-import { ChevronDown } from "lucide-react";
 
 import { cn } from "@/lib/utils";
 
@@ -55,9 +55,10 @@ const NavigationMenuTrigger = React.forwardRef<
     {...props}
   >
     {children}{" "}
-    <ChevronDown
+    <AltArrowDown
       className="relative top-px ml-1 size-3 transition duration-300 group-data-[state=open]:rotate-180"
       aria-hidden="true"
+      weight="BoldDuotone"
     />
   </NavigationMenuPrimitive.Trigger>
 ));

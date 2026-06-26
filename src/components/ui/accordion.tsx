@@ -3,7 +3,7 @@
 import * as React from "react";
 
 import * as AccordionPrimitive from "@radix-ui/react-accordion";
-import { ChevronDown } from "lucide-react";
+import { AltArrowDown } from "@solar-icons/react/ssr";
 
 import { cn } from "@/lib/utils";
 
@@ -35,7 +35,10 @@ const AccordionTrigger = React.forwardRef<
       {...props}
     >
       {children}
-      <ChevronDown className="text-muted-foreground size-4 shrink-0 transition-transform duration-200" />
+      <AltArrowDown
+        className="text-muted-foreground size-4 shrink-0 transition-transform duration-200"
+        weight="BoldDuotone"
+      />
     </AccordionPrimitive.Trigger>
   </AccordionPrimitive.Header>
 ));

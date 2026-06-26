@@ -4,7 +4,6 @@ import { Features } from "@/components/blocks/features";
 import { Hero } from "@/components/blocks/hero";
 import { Logos } from "@/components/blocks/logos";
 import { Pricing } from "@/components/blocks/pricing";
-import { ResourceAllocation } from "@/components/blocks/resource-allocation";
 import { Testimonials } from "@/components/blocks/testimonials";
 import { getSiteUrl } from "@/lib/site-url";
 
@@ -62,10 +61,10 @@ const structuredData = {
       ],
       offers: {
         "@type": "Offer",
-        name: "Taxa de 10% sobre valores processados",
+        name: "Taxa de 6% sobre valores processados",
         priceCurrency: "BRL",
         description:
-          "A LorenzPay cobra 10% sobre valores processados e cobre impactos financeiros de eventos elegíveis.",
+          "A LorenzPay cobra 6% sobre valores processados e cobre impactos financeiros de eventos elegíveis.",
       },
     },
     {
@@ -101,7 +100,7 @@ const structuredData = {
           name: "Qual a taxa da LorenzPay?",
           acceptedAnswer: {
             "@type": "Answer",
-            text: "A taxa da LorenzPay é de 10% sobre os valores processados.",
+            text: "A taxa da LorenzPay é de 6% sobre os valores processados.",
           },
         },
       ],
@@ -125,7 +124,6 @@ export default function Home() {
         <Hero />
         <Logos />
         <Features />
-        <ResourceAllocation />
       </Background>
       <Testimonials />
       <Background variant="bottom">

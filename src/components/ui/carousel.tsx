@@ -2,10 +2,10 @@
 
 import * as React from "react";
 
+import { AltArrowLeft, AltArrowRight } from "@solar-icons/react/ssr";
 import useEmblaCarousel, {
   type UseEmblaCarouselType,
 } from "embla-carousel-react";
-import { ChevronLeft, ChevronRight } from "lucide-react";
 
 import { Button } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
@@ -226,7 +226,7 @@ const CarouselPrevious = React.forwardRef<
       onClick={scrollPrev}
       {...props}
     >
-      <ChevronLeft className="size-6 lg:size-9" />
+      <AltArrowLeft className="size-6 lg:size-9" weight="BoldDuotone" />
       <span className="sr-only">Previous slide</span>
     </Button>
   );
@@ -255,7 +255,7 @@ const CarouselNext = React.forwardRef<
       onClick={scrollNext}
       {...props}
     >
-      <ChevronRight className="size-4" />
+      <AltArrowRight className="size-4" weight="BoldDuotone" />
       <span className="sr-only">Next slide</span>
     </Button>
   );

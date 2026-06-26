@@ -36,7 +36,7 @@ type TestimonialItem = {
 
 const items: TestimonialItem[] = [
   {
-    quote: "Contestação MED aberta contra uma venda legítima.",
+    quote: "Contestação MED aberta e alerta de fraude.",
     author: "Problema",
     role: "MED 2.0",
     company: "Pix contestado",
@@ -52,7 +52,7 @@ const items: TestimonialItem[] = [
     color: "#f59e0b",
   },
   {
-    quote: "Risco de bloqueio e perda da conta.",
+    quote: "Risco de bloqueio e perda permanente da conta.",
     author: "Consequência",
     role: "Conta em risco",
     company: "MED 2.0",
@@ -65,45 +65,13 @@ const items: TestimonialItem[] = [
     role: "Perda financeira",
     company: "Impacto imediato",
     icon: ShieldWarning,
-    color: "#f43f5e",
+    color: "#f98f5e",
   },
   {
-    quote: "Defesa MED conduzida pela LorenzPay.",
-    author: "Solução",
-    role: "Defesa estruturada",
-    company: "LorenzPay",
-    icon: ShieldCheck,
-    color: "#22c55e",
-  },
-  {
-    quote: "Comprovantes enviados e organizados pelo WhatsApp.",
-    author: "Solução",
-    role: "Evidências",
-    company: "LorenzPay",
-    icon: ChatSquareCheck,
-    color: "#22c55e",
-  },
-  {
-    quote: "Cobertura financeira para eventos elegíveis.",
-    author: "Solução",
-    role: "Proteção",
-    company: "LorenzPay",
-    icon: CheckCircle,
-    color: "#22c55e",
-  },
-  {
-    quote: "Repasse enviado após o comprovante da transação.",
-    author: "Solução",
-    role: "Recebimento",
-    company: "LorenzPay",
-    icon: CardReceive,
-    color: "#60a5fa",
-  },
-  {
-    quote: "Sem tempo perdido com contestação Pix.",
-    author: "Solução",
-    role: "Operação protegida",
-    company: "LorenzPay",
+    quote: "Tempo perdido com contestação Pix.",
+    author: "Consequência",
+    role: "Prejuízo",
+    company: "Estresse",
     icon: ClockCircle,
     color: "#a855f7",
   },
@@ -125,7 +93,7 @@ export const Testimonials = ({
         <div className="container">
           <div className="space-y-4">
             <h2 className="text-2xl tracking-tight md:text-4xl lg:text-5xl">
-              O problema do MED
+              Os problemas do MED <strong className="text-red-400">(diga adeus)</strong>
             </h2>
             <p className="text-muted-foreground max-w-md leading-snug">
               Uma contestação Pix pode reter saldo, bloquear a operação e gerar

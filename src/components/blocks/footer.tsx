@@ -1,6 +1,5 @@
-import Link from "next/link";
-
 import { Button } from "@/components/ui/button";
+import { WHATSAPP_CTA_URL } from "@/lib/whatsapp";
 
 export function Footer() {
   return (
@@ -15,7 +14,13 @@ export function Footer() {
         </p>
         <div>
           <Button size="lg" className="mt-4" asChild>
-            <Link href="/contact">Falar com CEO</Link>
+            <a
+              href={WHATSAPP_CTA_URL}
+              rel="noopener noreferrer"
+              target="_blank"
+            >
+              Falar com CEO
+            </a>
           </Button>
         </div>
       </div>
